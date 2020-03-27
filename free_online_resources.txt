@@ -1,0 +1,3 @@
+wilke, claus. Fundamentals of Data Visualization.  https://serialmentor.com/dataviz/
+miller, brad and ranum, david. Problem Solving with Algorithms and Data Structures using Python.    https://runestone.academy/runestone/books/published/pythonds/index.html
+newman, m.e.j. The Structure and Function of Complex Networks. https://epubs.siam.org/doi/pdf/10.1137/S003614450342480
