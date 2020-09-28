@@ -1,15 +1,27 @@
-Guo, Phillip. Python Tutor Visualizer. http://pythontutor.com/visualize.html#mode=edit
+Guo, Phillip. Python Tutor Visualizer. 
+http://pythontutor.com/visualize.html#mode=edit
 
-Wilke, Claus. Fundamentals of Data Visualization.  https://serialmentor.com/dataviz/
+Wilke, Claus. Fundamentals of Data Visualization.  
+https://serialmentor.com/dataviz/
 
-Miller, Brad and Ranum, David. Problem Solving with Algorithms and Data Structures using Python.    https://runestone.academy/runestone/books/published/pythonds/index.html
+Miller, Brad and Ranum, David. Problem Solving with Algorithms and Data Structures using Python.
+https://runestone.academy/runestone/books/published/pythonds/index.html
 
-Newman, M.E.J. The Structure and Function of Complex Networks. https://epubs.siam.org/doi/pdf/10.1137/S003614450342480
+Newman, M.E.J. The Structure and Function of Complex Networks.
+https://epubs.siam.org/doi/pdf/10.1137/S003614450342480
 
-Lay, David. Linear Algebra and Its Applications. https://readyforai.com/download/linear-algebra-and-its-applications-5th-edition-pdf/
+Lay, David. Linear Algebra and Its Applications. 
+https://readyforai.com/download/linear-algebra-and-its-applications-5th-edition-pdf/
 
-Goodfellow, Ian et al. Deep Learning. https://readyforai.com/download/deep-learning-pdf/
+Goodfellow, Ian et al. Deep Learning. 
+https://readyforai.com/download/deep-learning-pdf/
 
-Ross, Sheldon. A First Course in Probability. https://readyforai.com/download/a-first-course-in-probability-9th-edition-pdf
+Ross, Sheldon. A First Course in Probability. 
+https://readyforai.com/download/a-first-course-in-probability-9th-edition-pdf
 
-Computational Statistics in Python. http://people.duke.edu/~ccc14/sta-663-2017/
+Hastie, Trevor, Tibshirani, Robert, and Friedman, Jerome. The Elements of Statistical Learning
+https://web.stanford.edu/~hastie/ElemStatLearn/printings/ESLII_print12_toc.pdf
+
+Computational Statistics in Python. 
+http://people.duke.edu/~ccc14/sta-663-2017/
+
