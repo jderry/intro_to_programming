@@ -1,0 +1,3 @@
+SPECIFICATION: given the reformatted fasta file's contents loaded into session memory as a list-of-lists, write a function that takes the LoL as input and returns two tuples. the first tuple should include the minLen as its first value, and a tuple of the recordIDs of the records whose strings are the smallest in the dataset. it should look something like this: (minLen, ('ID1', 'ID2', etc)). the second tuple should include the maxLen as its first value, and a tuple of the recordIDs of the records whose strings are the largest in the dataset.
+Q: how many records have the smallest nucleotide strings, and how many have the largest?
+

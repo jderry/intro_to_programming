@@ -1,0 +1,3 @@
+this challenge extends the programming challenge in find_min_max_string_length_records.txt
+
+SPECIFICATION: write a function that calculates the gc content of each string in the reformatted_Unigene dataset, finds the greatest and smallest gc content in the dataset, and returns two tuples as in the previous programming challenge. the first value in the first tuple should be a float of the smallest ratio (g+c)/(a+c+g+t), and the second value should be a tuple of the strings of the recordIDs of all the records with the smallest ratio. the second tuple should be structured the same, with the first value being a float of the largest ratio, and the second value being a tuple of the strings of the recordIDs of all the records with the largest ratio.
