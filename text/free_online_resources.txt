@@ -10,6 +10,9 @@ https://runestone.academy/runestone/books/published/pythonds/index.html
 Newman, M.E.J. The Structure and Function of Complex Networks.
 https://epubs.siam.org/doi/pdf/10.1137/S003614450342480
 
+Zachary, Wayne W. An Information Flow Model for Conflict and Fission in Small Groups.
+https://www.jstor.org/stable/3629752
+
 Lay, David. Linear Algebra and Its Applications. 
 https://readyforai.com/download/linear-algebra-and-its-applications-5th-edition-pdf/
 
