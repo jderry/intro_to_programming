@@ -4,7 +4,7 @@ def loadAsLoL(file, compression="none"):
             LoS = inFile.read().splitlines()
             LoL = []
             for record in LoS:
-                LoL.append(record.split(' '))
+                LoL.append(record.split())
         return LoL
     elif compression == 'zip':
         import zipfile as z
