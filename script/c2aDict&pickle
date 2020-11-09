@@ -1,0 +1,21 @@
+# our method for building a dictionary from a dataset
+# whose two-value records fit the definition of key/value pairs
+# starts much like our method for building a list-of-lists
+# from a dataset
+c2aDict = dict()
+with open('repo/intro_to_programming/datafile/codon_amino_tabs.txt') as inFile:
+    LoS = inFile.read().splitlines()
+
+# now, we iterate through the list-of-strings,
+# and read each line (or record) in as two variables, key and value,
+# and we add each key/value pair to our dictionary
+for line in LoS:
+    key, value = line.split()
+    c2aDict[key] = value
+
+# demonstrating how to pickle a python object...
+import pickle
+pickle.dump(c2aDict, open("pickled/c2aDict.bin.pkl", "wb"))
+
+# as well as how to unpickle one
+c2aDict = pickle.load(open('pickled/c2aDict.bin.pkl', 'rb'))
