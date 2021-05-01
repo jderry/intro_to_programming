@@ -1,4 +1,4 @@
-# lines 3-7 to "linearize the sequences"
+# lines 4-7 to "linearize the sequences"
 # from https://www.biostars.org/p/17680/ by Frédéric Mahé
 zcat All-Unigene.fa.zip |# read fasta recordset in zipped file into memory
 sed -e 's/\(^>.*$\)/#\1#/' |# enclose first line in each record with hash marks
