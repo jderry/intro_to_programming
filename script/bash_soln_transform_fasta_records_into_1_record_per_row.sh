@@ -1,7 +1,7 @@
 # lines 4-7 to "linearize the sequences"
 # from https://www.biostars.org/p/17680/ by Frédéric Mahé
 zcat All-Unigene.fa.zip |# read fasta recordset in zipped file into memory
-sed -e 's/\(^>.*$\)/#\1#/' |# enclose first line in each record with hash marks
+sed -E -e 's/(^>.*$)/#\1#/' |# use egrep; enclose 1st line in each record with hash marks
 tr -d "\n" |# delete newline characters
 tr "#" "\n" |# replace hash symbols with newline characters
 sed -e '/^$/d' |# delete empty lines
