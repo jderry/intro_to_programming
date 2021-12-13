@@ -1,0 +1,30 @@
+# compile python in user directory on ubuntu virtualbox vm; configure to use it as default python;
+# install scipy libraries in user directory
+
+sudo apt install perl gcc make
+# install guest additions
+
+sudo apt update && sudo apt dist-upgrade (10s + 8m28s)
+
+sudo apt install vim xz-utils libffi-dev zlib1g-dev tklib libreadline-dev python3-tk python3-tk-dbg tix liblzma-dev libblkid-dev lib64readline-dev build-essential libssl-dev checkinstall libncursesw5-dev libgdbm-compat-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev (2m46s)
+
+wget https://www.python.org/ftp/python/3.10.1/Python-3.10.1.tar.xz
+tar -xf Python-3.10.1.tar.xz
+cd Python-3.10.1/
+
+./configure --enable-optimizations --prefix=$HOME/.local (25s)
+make -j 4 (3m28s)
+make install
+
+#### in .bashrc, add to top: ####
+PATH=$HOME/.local/bin:$PATH
+alias python='python3.10'
+alias pip='pip3.10'
+
+####
+
+python -m pip install --upgrade pip (3s)
+pip install --upgrade nbconvert (20s)
+pip install ipython numpy scipy jupyter matplotlib pandas pylint seaborn ipyparallel (1m53s)
+
+pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U
