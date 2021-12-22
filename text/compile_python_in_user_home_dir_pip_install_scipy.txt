@@ -25,7 +25,7 @@ alias pip='pip3.10'
 
 python -m pip install --upgrade pip (3s)
 pip install --upgrade nbconvert (20s)
-pip install wheel ipython numpy scipy jupyter matplotlib pandas pylint seaborn ipyparallel (1m53s)
+pip install wheel ipython numpy scipy jupyter matplotlib pandas pylint seaborn sympy ipyparallel (1m53s)
 
 pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U
 # mistune version 2.0 causes jupyter notebooks to fail; therefore ---
