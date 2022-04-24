@@ -16,14 +16,14 @@ while True:
     floor = 1
     ceiling = input("please enter the highest number of your range: ")
 
-    # remember that the 'break' statement lets the program counter leave the innermost loop structure that it's in
-    # that how we 'break out' of the infinite loop
-    # 'continue' is related to 'break' -- it returns the program counter to the top of the while loop
-    try:
-        ceiling = int(ceiling)
-        break
-    except ValueError:
-        print("That's not an integer!" + '\n\n')
+    # remember that the 'break' statement lets the program counter
+    # leave the innermost loop structure that it's in.
+    # that how we 'break out' of the infinite loop.
+    # 'continue' is related to 'break' ---
+    # it returns the program counter to the top of the while loop.
+    if not isinstance(ceiling, int) and\
+       not ceiling > 1:
+        print("that's not a legitimate value. please enter a counting number greater than 1.")
         continue
 
 # print the challenge of fewest guesses using this algorithm
