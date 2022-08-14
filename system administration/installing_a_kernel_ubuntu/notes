@@ -1,0 +1,13 @@
+# on command line, find your installed kernel with: uname -a
+# search for the most recent kernel available for your cpu at: https://kernel.ubuntu.com/~kernel-ppa/mainline/
+# for purposes of this demonstration, we'll say that the most recent available kernel is: v5.19.1
+# follow the hyperlink.
+# find the .deb files for your CPU type. my CPU type is amd64.
+# save all the .deb files for your CPU type to a folder in your home directory.
+# (i prefer to name the folder after the kernel version of the .deb files --- in this case: v5.19.1)
+# once the downloads have finished, navigate into the folder and run: sudo dpkg -i *.deb
+# (dpkg will install the files)
+# to list all installed linux images on your machine, on the command line run: dpkg --list | grep linux-image
+# for purposes of this demonstration, we'll remove linux-image-5.15.0-39-generic.
+# on the command line, run: sudo apt purge linux-image-5.15.0-39-generic
+# (you should leave at least one known good old kernel on your system.)
