@@ -3,4 +3,4 @@ pip list -o | cut -f1 -d' ' | tr " " "\n" | gawk '{if(NR>=3)print}' | cut -d' ' 
 pip install pip-conflict-checker
 # how to invoke on command line: pipconflictchecker
 pip index versions PACKAGENAME
-pip install PACKAGENAME==VERSIONNUMBER
+pip install PACKAGENAME==VERSIONNUMBER # specify which version of a package to install
