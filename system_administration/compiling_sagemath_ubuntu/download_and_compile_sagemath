@@ -1,0 +1,20 @@
+# select a mirror, download the torrent file for the tarred and gzipped most current version of SageMath
+# (currently, sage-9.7.tar.gz)
+https://www.sagemath.org/download-source.html
+
+# gunzip and untar file
+gunzip sage-9.7.tar.gz
+tar -xvf sage-9.7.tar
+
+# set the location of compiled sagemath in the hidden directory .local in our home directory
+SAGE_ROOT="$HOME/.local/sagemath"
+# cd into the sage-9.7 directory
+cd sage-9.7/
+
+# run configure
+# --disable-editable : this lets us delete the entire Sage source tree after completing the build process.
+# a self-contained installation of SageMath will be installed in SAGE_ROOT
+./configure --disable-editable --prefix="$SAGE_ROOT"
+make -j 4 # allow make to use 4 cores for the compile process
+# SageMath is an integrated collection of open source software, all of which gets compiled
+# this means that it takes time for compile to run to completion (95 minutes for me on my vm)
