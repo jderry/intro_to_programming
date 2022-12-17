@@ -18,3 +18,14 @@ cd sage-9.7/
 make -j 4 # allow make to use 4 cores for the compile process
 # SageMath is an integrated collection of open source software, all of which gets compiled
 # this means that it takes time for compile to run to completion (95 minutes for me on my vm)
+
+# assuming that you've compiled and installed python and sagemath into .local
+# following the instructions i've provided, you'll want to add these lines to the top
+# of your .bashrc file:
+alias python=python3
+alias pip=pip3
+PATH="/home/user/.local/bin:/home/user/.local/sagemath/bin:$PATH"
+
+# restart your bash session and test to ensure everything works
+# (invoke python on the command line; make sure it's the compiled version.
+#  invoke sagemath on the command line)
