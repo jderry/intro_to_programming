@@ -1,0 +1,9 @@
+# constDict['expr0'] = 1/(float(constDict['CSiO2(F/cm2)']) * float(constDict['W/L']))
+#
+ESiO2	3.9
+Eo(F/cm)	8.85E-14
+dSiO2(cm)	2.90E-5
+CSiO2(F/cm2)	1.190E-08
+W/L	20
+inFolder	/home/james/python/calla_mcculley/inFolder/
+outFolder	/home/james/python/calla_mcculley/outFolder/
