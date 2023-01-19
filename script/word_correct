@@ -1,0 +1,7 @@
+echo "At Bell Laborotories, UNIX systems privide more timesharing ports than all other systems combined." | # input 
+tr -d '[:punct:]' | # delete punctuation in the string
+tr -s ' ' '\n' | # replace spaces with newline characters
+tr '[:upper:]' '[:lower:]' | # replace uppercase chars with lowercase equivalents
+sort | # alphanumeric sort
+uniq | # replace contiguous duplicate records with single instances
+egrep -xvf $DICT # -x match whole lines, -v invert the match (show words not in DICT), -f filename
