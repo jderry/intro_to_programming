@@ -17,6 +17,7 @@ class TestCalc(unittest.TestCase):
    def test_add(self):
       result = calc.add(10, 5)
       self.assertEqual(result, 15)
+      # make sure to add edge cases
    
 ''' here we set the code up so that it can run on the command line
     without the -m option (import module)
