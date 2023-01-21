@@ -2,6 +2,8 @@
     Unit Testing Your Code With the unittest Module
     by Corey Schafer, https://www.youtube.com/watch?v=6tNS--WetLI
 '''
+# rename this file to: calc.py
+
 def add(x, y):
    return x + y
    
