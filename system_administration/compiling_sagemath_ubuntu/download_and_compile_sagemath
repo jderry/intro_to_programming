@@ -24,7 +24,7 @@ make -j 4 # allow make to use 4 cores for the compile process
 # of your .bashrc file:
 alias python=python3
 alias pip=pip3
-PATH="/home/user/.local/bin:/home/user/.local/sagemath/bin:$PATH"
+PATH="/home/user/.local/bin:$PATH:/home/user/.local/sagemath/bin"
 
 # restart your bash session and test to ensure everything works
 # (invoke python on the command line; make sure it's the compiled version.
