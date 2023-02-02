@@ -2,6 +2,10 @@
 # (currently, sage-9.7.tar.gz)
 https://www.sagemath.org/download-source.html
 
+# (i always go with the mit archives.)
+# choosing the torrent option in firefox will launch ubuntu's built-in torrent client, called transmission.
+# once the download has completed, make sure to close transmission and delete the torrent file.
+
 # gunzip and untar file
 gunzip sage-9.7.tar.gz
 tar -xvf sage-9.7.tar
@@ -18,6 +22,18 @@ cd sage-9.7/
 make -j 4 # allow make to use 4 cores for the compile process
 # SageMath is an integrated collection of open source software, all of which gets compiled
 # this means that it takes time for compile to run to completion (95 minutes for me on my vm)
+
+# i have experienced memory exhaustion during the make step.
+# when this happens, the system's oomd (out-of-memory daemon) kills the process(es) responsible
+# for the exhaustion, meaning the compile process halts before completing normally.
+# if you need to re-run the compile process, delete the build directory (in this case, the sage-9.7 directory),
+# and re-untar the tar file.
+
+# to deal with the memory exhaustion problem, you can either temporarily increase the vm's memory
+# to compile sagemath (turn the vm off, go to settings for the vm in the hypervisor; and increase
+# the vm's ram by at least one more GB), or run the compile with fewer cores.
+# (increasing ram can shorten how long it takes sagemath to compile. for me, it was ~80 minutes.
+# decreasing the core count can lengthen how long it takes sagemath to compile.)
 
 # assuming that you've compiled and installed python and sagemath into .local
 # following the instructions i've provided, you'll want to add these lines to the top
