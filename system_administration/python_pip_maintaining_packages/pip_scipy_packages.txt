@@ -1,1 +1,1 @@
-pip install ipython numpy scipy scikit-bio scikit-image networkx jupyter matplotlib pandas seaborn ipyparallel pylint wheel pint
+pip install wheel pylint pint ipython numpy scipy scikit-bio scikit-image networkx jupyter matplotlib pandas seaborn ipyparallel 
