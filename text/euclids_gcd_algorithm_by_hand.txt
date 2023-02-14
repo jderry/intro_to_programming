@@ -1,0 +1,5 @@
+1. take two positive integers and assign them to variables a,b such that a>b
+2. calculate r = a%b # r is remainder, the arithmetic operation is the modulus operator
+3. is r==0?
+3a. YES. write down b. STOP
+3b. NO. assign r,b to variables a,b such that a>b. GOTO step 2.
