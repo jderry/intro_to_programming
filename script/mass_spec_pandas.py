@@ -2,7 +2,7 @@
 import pandas as pd
 import numpy as np
 
-df = pd.read_csv('/home/james/datafile/rachel_data.csv')
+df = pd.read_csv('../datafile/mass_spec_data.csv')
 
 df=df.dropna(axis=1,how='all') # drop empty column
 df = df.replace(0, np.nan) # replace zeros with NaN
@@ -18,4 +18,4 @@ for row in range(len(nanList)): # this for-loop goes down the rows
 
 df = df.replace(np.nan, 0) # replace NaNs with zeros, restoring the numerical format of the data
 
-df.to_csv('rachel_fixed_csv', float_format='%.9f', index=False) # write out the results
+df.to_csv('../datafile/mass_spec_fixed_csv', float_format='%.9f', index=False) # write out the results
