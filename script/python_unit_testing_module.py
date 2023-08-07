@@ -17,6 +17,8 @@ class TestCalc(unittest.TestCase):
    def test_add(self):
       result = calc.add(10, 5)
       self.assertEqual(result, 15)
+      result = calc.add(-10, 5)
+      self.assertEqual(result, -5)
       # make sure to add edge cases
       # make sure to add exceptions
    
