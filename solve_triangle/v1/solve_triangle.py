@@ -1,8 +1,9 @@
+
 ''' solve_triangle. we put the function into its own module.
 '''
 # initialization
 from numpy import deg2rad, rad2deg
-from solve_triangle_modules import \
+from solve_triangle_sbr import \
     solve_sss, solve_aaa, solve_asa, solve_sas, solve_ssa, solve_ass, solve_aas, solve_saa
 
 def solve_triangle(side1=None, side2=None, side3=None,\
@@ -19,23 +20,27 @@ def solve_triangle(side1=None, side2=None, side3=None,\
        Output tuple follows the same ordering as the function's argument list:
        (side1, side2, side3, angle1, angle2, angle3)
        Examples:
-       >>>solve_triangle(side1=7, side2=5, angle3=49, rnd=True, decDigs=2)
+       >>>solve_triangle(side1=7, side2=5, angle3=49, rnd=True, dec_digs=2)
        (7, 5, 5.3, 85.59, 45.41, 49.0) # angles in degrees, rounding to 2 decimal digits
     '''
     # begin garbage filter
-    # assert that 3 parts of a triangle are passed in.
-    assert bool(side1) + bool(side2) + bool(side3) +\
-           bool(angle1) + bool(angle2) + bool(angle3) == 3,\
-           "please provide a combination of angles and sides whose count is 3."
-    # assert that if users choose to round output values,
-    # they specify the number of decimal digits
-    if rnd:
-        assert dec_digs,\
-         "if you round the output," +\
-         " you must specify the number of digits after the decimal point."
-    # assert that the sides and angles are positive reals.
-    # assert that degrees and rnd values are bools.
-    # assert that decDigs value is a natural number.
+    # ensure side and angle values are positive reals.
+    pos_reals = True
+    if side1 and not (isinstance(side1, (int, float)) and side1 > 0):
+        pos_reals = False
+    if side2 and not (isinstance(side2, (int, float)) and side2 > 0):
+        pos_reals = False
+    if side3 and not (isinstance(side3, (int, float)) and side3 > 0):
+        pos_reals = False
+    if angle1 and not (isinstance(angle1, (int, float)) and angle1 > 0):
+        pos_reals = False
+    if angle2 and not (isinstance(angle2, (int, float)) and angle2 > 0):
+        pos_reals = False
+    if angle3 and not (isinstance(angle3, (int, float)) and angle3 > 0):
+        pos_reals = False
+    assert pos_reals, "triangle sides and angles must be positive reals"
+    # ensure degrees and rnd are bools.
+    # ensure dec_digs is a natural number.
     # end garbage filter
 
 
@@ -48,8 +53,6 @@ def solve_triangle(side1=None, side2=None, side3=None,\
             angle2 = deg2rad(angle2)
         if angle3:
             angle3 = deg2rad(angle3)
-    else:
-        pass
 
     ##### BEGIN MAIN #####
     # the conditional branching determines which subroutine applies
@@ -92,6 +95,7 @@ def solve_triangle(side1=None, side2=None, side3=None,\
 
     else:
         pass
+    # each subroutine returns a return_tuple
     ##### END MAIN #####
 
     # convert radians to degrees

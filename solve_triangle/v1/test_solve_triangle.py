@@ -1,6 +1,6 @@
 import unittest
 from solve_triangle import *
-from solve_triangle_modules import *
+from solve_triangle_sbr import *
 
 class test_solve_triangle(unittest.TestCase):
 
@@ -30,3 +30,6 @@ class test_solve_triangle(unittest.TestCase):
         
 if __name__== '__main__':
     unittest.main()
+
+
+

@@ -44,6 +44,13 @@ class TestSolveTriangle(unittest.TestCase):
         '''
         result = solve_triangle('aaa', 95, 35, 50, dec_digs=5)
         self.assertEqual(result, (1.73681, 1.0, 1.33556, 95.0, 35.0, 50.0))
+    def test_solve_triangle_sas1(self):
+        '''('sas', 5, 49, 7, dec_digs=4)
+        '''
+        result = solve_triangle('sas', 5, 49, 7, dec_digs=4)
+        self.assertEqual(result, (5, 7, 5.2987, 45.4117, 85.5883, 49.0))
+
+        
     def test_solve_triangle_ssa1(self):
         '''('ssa', 22, 32, 32, dec_digs=4)
            2 solutions
