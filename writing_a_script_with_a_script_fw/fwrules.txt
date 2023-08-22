@@ -1,0 +1,3263 @@
+Rule Name:                            @{Microsoft.XboxGameCallableUI_1000.14393.0.0_neutral_neutral_cw5n1h2txyewy?ms-resource://Microsoft.XboxGameCallableUI/resources/PkgDisplayName}
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             Xbox Game UI
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            @{Microsoft.Windows.Apprep.ChxApp_1000.14393.0.0_neutral_neutral_cw5n1h2txyewy?ms-resource://Microsoft.Windows.Apprep.ChxApp/resources/DisplayName}
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             SmartScreen
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            @{Microsoft.LockApp_10.0.14393.0_neutral__cw5n1h2txyewy?ms-resource://Microsoft.LockApp/resources/AppDisplayName}
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             Windows Default Lock Screen
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            @{Microsoft.AccountsControl_10.0.14393.1715_neutral__cw5n1h2txyewy?ms-resource://Microsoft.AccountsControl/Resources/DisplayName}
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             Email and accounts
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            @{Microsoft.Windows.Cortana_1.7.0.14393_neutral_neutral_cw5n1h2txyewy?ms-resource://Microsoft.Windows.Cortana/resources/PackageDisplayName}
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Cortana
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             Any
+Edge traversal:                       Yes
+Action:                               Allow
+
+Rule Name:                            @{Microsoft.Windows.Cortana_1.7.0.14393_neutral_neutral_cw5n1h2txyewy?ms-resource://Microsoft.Windows.Cortana/resources/PackageDisplayName}
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             Cortana
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            @{Microsoft.Windows.ShellExperienceHost_10.0.14393.1715_neutral_neutral_cw5n1h2txyewy?ms-resource://Microsoft.Windows.ShellExperienceHost/resources/PkgDisplayName}
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             Windows Shell Experience
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            @{Microsoft.Windows.CloudExperienceHost_10.0.14393.1066_neutral_neutral_cw5n1h2txyewy?ms-resource://Microsoft.Windows.CloudExperienceHost/resources/appDescription}
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private
+Grouping:                             Your account
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            @{Microsoft.Windows.CloudExperienceHost_10.0.14393.1066_neutral_neutral_cw5n1h2txyewy?ms-resource://Microsoft.Windows.CloudExperienceHost/resources/appDescription}
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             Your account
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            @{Microsoft.AAD.BrokerPlugin_1000.14393.0.0_neutral_neutral_cw5n1h2txyewy?ms-resource://Microsoft.AAD.BrokerPlugin/resources/PackageDisplayName}
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private
+Grouping:                             Work or school account
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            @{Microsoft.AAD.BrokerPlugin_1000.14393.0.0_neutral_neutral_cw5n1h2txyewy?ms-resource://Microsoft.AAD.BrokerPlugin/resources/PackageDisplayName}
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             Work or school account
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            DFS Management (SMB-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             DFS Management
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            445
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            DFS Management (WMI-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             DFS Management
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            RPC
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            DFS Management (DCOM-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             DFS Management
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            135
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            DFS Management (TCP-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             DFS Management
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            RPC
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Active Directory Domain Controller -  Echo Request (ICMPv6-Out)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             Active Directory Domain Services
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             ICMPv6
+                                      Type    Code
+                                      128     Any 
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Active Directory Domain Controller -  Echo Request (ICMPv6-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Active Directory Domain Services
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             ICMPv6
+                                      Type    Code
+                                      128     Any 
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Active Directory Domain Controller -  Echo Request (ICMPv4-Out)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             Active Directory Domain Services
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             ICMPv4
+                                      Type    Code
+                                      8       Any 
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Active Directory Domain Controller -  Echo Request (ICMPv4-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Active Directory Domain Services
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             ICMPv4
+                                      Type    Code
+                                      8       Any 
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Active Directory Domain Controller - W32Time (NTP-UDP-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Active Directory Domain Services
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             UDP
+LocalPort:                            123
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Active Directory Domain Controller - NetBIOS name resolution (UDP-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Active Directory Domain Services
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             UDP
+LocalPort:                            138
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Active Directory Domain Controller - SAM/LSA (NP-TCP-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Active Directory Domain Services
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            445
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Active Directory Domain Controller - SAM/LSA (NP-UDP-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Active Directory Domain Services
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             UDP
+LocalPort:                            445
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Active Directory Domain Controller (UDP-Out)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             Active Directory Domain Services
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             UDP
+LocalPort:                            Any
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Active Directory Domain Controller (TCP-Out)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             Active Directory Domain Services
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            Any
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Active Directory Domain Controller - Secure LDAP for Global Catalog (TCP-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Active Directory Domain Services
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            3269
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Active Directory Domain Controller - LDAP for Global Catalog (TCP-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Active Directory Domain Services
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            3268
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Active Directory Domain Controller - Secure LDAP (TCP-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Active Directory Domain Services
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            636
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Active Directory Domain Controller - LDAP (UDP-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Active Directory Domain Services
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             UDP
+LocalPort:                            389
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Active Directory Domain Controller - LDAP (TCP-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Active Directory Domain Services
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            389
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Active Directory Domain Controller (RPC-EPMAP)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Active Directory Domain Services
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            RPC-EPMap
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Active Directory Domain Controller (RPC)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Active Directory Domain Services
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            RPC
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            File Server Remote Management (SMB-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             File Server Remote Management
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            445
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            File Server Remote Management (DCOM-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             File Server Remote Management
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            135
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            File Server Remote Management (WMI-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             File Server Remote Management
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            RPC
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            File Replication (RPC-EPMAP)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             File Replication
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            RPC-EPMap
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            File Replication (RPC)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             File Replication
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            RPC
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Active Directory Web Services (TCP-Out)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             Active Directory Web Services
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            Any
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Active Directory Web Services (TCP-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Active Directory Web Services
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            9389
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            DFS Replication (RPC-EPMAP)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             DFS Replication
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            RPC-EPMap
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            DFS Replication (RPC-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             DFS Replication
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            RPC
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Microsoft Key Distribution Service
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Microsoft Key Distribution Service
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            RPC
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Microsoft Key Distribution Service
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Microsoft Key Distribution Service
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            RPC-EPMap
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            All Outgoing (UDP)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             DNS Service
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             UDP
+LocalPort:                            Any
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            All Outgoing (TCP)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             DNS Service
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            Any
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            RPC (TCP, Incoming)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             DNS Service
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            RPC
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            DNS (UDP, Incoming)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             DNS Service
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             UDP
+LocalPort:                            53
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            DNS (TCP, Incoming)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             DNS Service
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            53
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            RPC Endpoint Mapper (TCP, Incoming)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             DNS Service
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            RPC-EPMap
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Kerberos Key Distribution Center - PCR (UDP-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Kerberos Key Distribution Center
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             UDP
+LocalPort:                            464
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Kerberos Key Distribution Center - PCR (TCP-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Kerberos Key Distribution Center
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            464
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Kerberos Key Distribution Center (UDP-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Kerberos Key Distribution Center
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             UDP
+LocalPort:                            88
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Kerberos Key Distribution Center (TCP-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Kerberos Key Distribution Center
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            88
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            @{Microsoft.XboxGameCallableUI_1000.14393.0.0_neutral_neutral_cw5n1h2txyewy?ms-resource://Microsoft.XboxGameCallableUI/resources/PkgDisplayName}
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             Xbox Game UI
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            @{Microsoft.Windows.Apprep.ChxApp_1000.14393.0.0_neutral_neutral_cw5n1h2txyewy?ms-resource://Microsoft.Windows.Apprep.ChxApp/resources/DisplayName}
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             SmartScreen
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            @{Microsoft.LockApp_10.0.14393.0_neutral__cw5n1h2txyewy?ms-resource://Microsoft.LockApp/resources/AppDisplayName}
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             Windows Default Lock Screen
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            @{Microsoft.AccountsControl_10.0.14393.1715_neutral__cw5n1h2txyewy?ms-resource://Microsoft.AccountsControl/Resources/DisplayName}
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             Email and accounts
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            @{Microsoft.Windows.Cortana_1.7.0.14393_neutral_neutral_cw5n1h2txyewy?ms-resource://Microsoft.Windows.Cortana/resources/PackageDisplayName}
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Cortana
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             Any
+Edge traversal:                       Yes
+Action:                               Allow
+
+Rule Name:                            @{Microsoft.Windows.Cortana_1.7.0.14393_neutral_neutral_cw5n1h2txyewy?ms-resource://Microsoft.Windows.Cortana/resources/PackageDisplayName}
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             Cortana
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            @{Microsoft.Windows.ShellExperienceHost_10.0.14393.1715_neutral_neutral_cw5n1h2txyewy?ms-resource://Microsoft.Windows.ShellExperienceHost/resources/PkgDisplayName}
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             Windows Shell Experience
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            @{Microsoft.Windows.CloudExperienceHost_10.0.14393.1066_neutral_neutral_cw5n1h2txyewy?ms-resource://Microsoft.Windows.CloudExperienceHost/resources/appDescription}
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private
+Grouping:                             Your account
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            @{Microsoft.Windows.CloudExperienceHost_10.0.14393.1066_neutral_neutral_cw5n1h2txyewy?ms-resource://Microsoft.Windows.CloudExperienceHost/resources/appDescription}
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             Your account
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            @{Microsoft.AAD.BrokerPlugin_1000.14393.0.0_neutral_neutral_cw5n1h2txyewy?ms-resource://Microsoft.AAD.BrokerPlugin/resources/PackageDisplayName}
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private
+Grouping:                             Work or school account
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            @{Microsoft.AAD.BrokerPlugin_1000.14393.0.0_neutral_neutral_cw5n1h2txyewy?ms-resource://Microsoft.AAD.BrokerPlugin/resources/PackageDisplayName}
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             Work or school account
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Cast to Device functionality (qWave-TCP-Out)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            Out
+Profiles:                             Private,Public
+Grouping:                             Cast to Device functionality
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            Any
+RemotePort:                           2177
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Cast to Device functionality (qWave-TCP-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Private,Public
+Grouping:                             Cast to Device functionality
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            2177
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Cast to Device functionality (qWave-UDP-Out)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            Out
+Profiles:                             Private,Public
+Grouping:                             Cast to Device functionality
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             UDP
+LocalPort:                            Any
+RemotePort:                           2177
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Cast to Device functionality (qWave-UDP-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Private,Public
+Grouping:                             Cast to Device functionality
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             UDP
+LocalPort:                            2177
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Cast to Device UPnP Events (TCP-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Public
+Grouping:                             Cast to Device functionality
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            2869
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Cast to Device SSDP Discovery (UDP-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Public
+Grouping:                             Cast to Device functionality
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             UDP
+LocalPort:                            Ply2Disc
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Cast to Device streaming server (RTSP-Streaming-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Public
+Grouping:                             Cast to Device functionality
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            23554,23555,23556
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Cast to Device streaming server (RTSP-Streaming-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Private
+Grouping:                             Cast to Device functionality
+LocalIP:                              Any
+RemoteIP:                             LocalSubnet
+Protocol:                             TCP
+LocalPort:                            23554,23555,23556
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Cast to Device streaming server (RTSP-Streaming-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain
+Grouping:                             Cast to Device functionality
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            23554,23555,23556
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Cast to Device streaming server (RTP-Streaming-Out)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            Out
+Profiles:                             Public
+Grouping:                             Cast to Device functionality
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             UDP
+LocalPort:                            Any
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Cast to Device streaming server (RTP-Streaming-Out)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            Out
+Profiles:                             Private
+Grouping:                             Cast to Device functionality
+LocalIP:                              Any
+RemoteIP:                             LocalSubnet
+Protocol:                             UDP
+LocalPort:                            Any
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Cast to Device streaming server (RTP-Streaming-Out)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            Out
+Profiles:                             Domain
+Grouping:                             Cast to Device functionality
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             UDP
+LocalPort:                            Any
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Cast to Device streaming server (RTCP-Streaming-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Public
+Grouping:                             Cast to Device functionality
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             UDP
+LocalPort:                            Any
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Cast to Device streaming server (RTCP-Streaming-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Private
+Grouping:                             Cast to Device functionality
+LocalIP:                              Any
+RemoteIP:                             LocalSubnet
+Protocol:                             UDP
+LocalPort:                            Any
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Cast to Device streaming server (RTCP-Streaming-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain
+Grouping:                             Cast to Device functionality
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             UDP
+LocalPort:                            Any
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Cast to Device streaming server (HTTP-Streaming-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Public
+Grouping:                             Cast to Device functionality
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            10246
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Cast to Device streaming server (HTTP-Streaming-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Private
+Grouping:                             Cast to Device functionality
+LocalIP:                              Any
+RemoteIP:                             LocalSubnet
+Protocol:                             TCP
+LocalPort:                            10246
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Cast to Device streaming server (HTTP-Streaming-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain
+Grouping:                             Cast to Device functionality
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            10246
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            DIAL protocol server (HTTP-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Private
+Grouping:                             DIAL protocol server
+LocalIP:                              Any
+RemoteIP:                             LocalSubnet
+Protocol:                             TCP
+LocalPort:                            10247
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            DIAL protocol server (HTTP-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain
+Grouping:                             DIAL protocol server
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            10247
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Distributed Transaction Coordinator (RPC-EPMAP)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Distributed Transaction Coordinator
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            RPC-EPMap
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Distributed Transaction Coordinator (RPC)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Distributed Transaction Coordinator
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            RPC
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Distributed Transaction Coordinator (TCP-Out)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             Distributed Transaction Coordinator
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            Any
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Distributed Transaction Coordinator (TCP-In)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Distributed Transaction Coordinator
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            Any
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Windows Firewall Remote Management (RPC-EPMAP)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Windows Firewall Remote Management
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            RPC-EPMap
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Windows Firewall Remote Management (RPC)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Windows Firewall Remote Management
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            RPC
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Windows Management Instrumentation (ASync-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Windows Management Instrumentation (WMI)
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            Any
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Windows Management Instrumentation (WMI-Out)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             Windows Management Instrumentation (WMI)
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            Any
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Windows Management Instrumentation (WMI-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Windows Management Instrumentation (WMI)
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            Any
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Windows Management Instrumentation (DCOM-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Windows Management Instrumentation (WMI)
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            135
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            TPM Virtual Smart Card Management (TCP-Out)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            Out
+Profiles:                             Private,Public
+Grouping:                             TPM Virtual Smart Card Management
+LocalIP:                              Any
+RemoteIP:                             LocalSubnet
+Protocol:                             TCP
+LocalPort:                            Any
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            TPM Virtual Smart Card Management (TCP-In)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            In
+Profiles:                             Private,Public
+Grouping:                             TPM Virtual Smart Card Management
+LocalIP:                              Any
+RemoteIP:                             LocalSubnet
+Protocol:                             TCP
+LocalPort:                            Any
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            TPM Virtual Smart Card Management (DCOM-In)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            In
+Profiles:                             Private,Public
+Grouping:                             TPM Virtual Smart Card Management
+LocalIP:                              Any
+RemoteIP:                             LocalSubnet
+Protocol:                             TCP
+LocalPort:                            135
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            TPM Virtual Smart Card Management (TCP-Out)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            Out
+Profiles:                             Domain
+Grouping:                             TPM Virtual Smart Card Management
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            Any
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            TPM Virtual Smart Card Management (TCP-In)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            In
+Profiles:                             Domain
+Grouping:                             TPM Virtual Smart Card Management
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            Any
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            TPM Virtual Smart Card Management (DCOM-In)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            In
+Profiles:                             Domain
+Grouping:                             TPM Virtual Smart Card Management
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            135
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Software Load Balancer Multiplexer (TCP-In)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Software Load Balancer
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            Any
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            mDNS (UDP-Out)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             mDNS
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             UDP
+LocalPort:                            5353
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            mDNS (UDP-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             mDNS
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             UDP
+LocalPort:                            mDNS
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Remote Service Management (RPC-EPMAP)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Remote Service Management
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            RPC-EPMap
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Remote Service Management (NP-In)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Remote Service Management
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            445
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Remote Service Management (RPC)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Remote Service Management
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            RPC
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            COM+ Remote Administration (DCOM-In)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             COM+ Remote Administration
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            RPC
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            COM+ Network Access (DCOM-In)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             COM+ Network Access
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            135
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            File and Printer Sharing (LLMNR-UDP-Out)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             File and Printer Sharing
+LocalIP:                              Any
+RemoteIP:                             LocalSubnet
+Protocol:                             UDP
+LocalPort:                            Any
+RemotePort:                           5355
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            File and Printer Sharing (LLMNR-UDP-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             File and Printer Sharing
+LocalIP:                              Any
+RemoteIP:                             LocalSubnet
+Protocol:                             UDP
+LocalPort:                            5355
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            File and Printer Sharing (Echo Request - ICMPv6-Out)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             File and Printer Sharing
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             ICMPv6
+                                      Type    Code
+                                      128     Any 
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            File and Printer Sharing (Echo Request - ICMPv6-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             File and Printer Sharing
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             ICMPv6
+                                      Type    Code
+                                      128     Any 
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            File and Printer Sharing (Echo Request - ICMPv4-Out)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             File and Printer Sharing
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             ICMPv4
+                                      Type    Code
+                                      8       Any 
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            File and Printer Sharing (Echo Request - ICMPv4-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             File and Printer Sharing
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             ICMPv4
+                                      Type    Code
+                                      8       Any 
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            File and Printer Sharing (Spooler Service - RPC-EPMAP)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             File and Printer Sharing
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            RPC-EPMap
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            File and Printer Sharing (Spooler Service - RPC)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             File and Printer Sharing
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            RPC
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            File and Printer Sharing (NB-Datagram-Out)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             File and Printer Sharing
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             UDP
+LocalPort:                            Any
+RemotePort:                           138
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            File and Printer Sharing (NB-Datagram-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             File and Printer Sharing
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             UDP
+LocalPort:                            138
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            File and Printer Sharing (NB-Name-Out)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             File and Printer Sharing
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             UDP
+LocalPort:                            Any
+RemotePort:                           137
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            File and Printer Sharing (NB-Name-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             File and Printer Sharing
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             UDP
+LocalPort:                            137
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            File and Printer Sharing (SMB-Out)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             File and Printer Sharing
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            Any
+RemotePort:                           445
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            File and Printer Sharing (SMB-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             File and Printer Sharing
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            445
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            File and Printer Sharing (NB-Session-Out)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             File and Printer Sharing
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            Any
+RemotePort:                           139
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            File and Printer Sharing (NB-Session-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             File and Printer Sharing
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            139
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Core Networking - Group Policy (LSASS-Out)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            Out
+Profiles:                             Domain
+Grouping:                             Core Networking
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            Any
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Core Networking - DNS (UDP-Out)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             Core Networking
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             UDP
+LocalPort:                            Any
+RemotePort:                           53
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Core Networking - Group Policy (TCP-Out)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            Out
+Profiles:                             Domain
+Grouping:                             Core Networking
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            Any
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Core Networking - Group Policy (NP-Out)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            Out
+Profiles:                             Domain
+Grouping:                             Core Networking
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            Any
+RemotePort:                           445
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Core Networking - IPv6 (IPv6-Out)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             Core Networking
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             41
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Core Networking - IPv6 (IPv6-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Core Networking
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             41
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Core Networking - IPHTTPS (TCP-Out)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             Core Networking
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            Any
+RemotePort:                           IPHTTPS
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Core Networking - IPHTTPS (TCP-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Core Networking
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            IPHTTPS
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Core Networking - Teredo (UDP-Out)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             Core Networking
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             UDP
+LocalPort:                            Any
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Core Networking - Teredo (UDP-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Core Networking
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             UDP
+LocalPort:                            Teredo
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Core Networking - Dynamic Host Configuration Protocol for IPv6(DHCPV6-Out)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             Core Networking
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             UDP
+LocalPort:                            546
+RemotePort:                           547
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Core Networking - Dynamic Host Configuration Protocol for IPv6(DHCPV6-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Core Networking
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             UDP
+LocalPort:                            546
+RemotePort:                           547
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Core Networking - Dynamic Host Configuration Protocol (DHCP-Out)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             Core Networking
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             UDP
+LocalPort:                            68
+RemotePort:                           67
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Core Networking - Dynamic Host Configuration Protocol (DHCP-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Core Networking
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             UDP
+LocalPort:                            68
+RemotePort:                           67
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Core Networking - Internet Group Management Protocol (IGMP-Out)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             Core Networking
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             2
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Core Networking - Internet Group Management Protocol (IGMP-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Core Networking
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             2
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Core Networking - Destination Unreachable Fragmentation Needed (ICMPv4-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Core Networking
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             ICMPv4
+                                      Type    Code
+                                      3       4   
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Core Networking - Multicast Listener Done (ICMPv6-Out)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             Core Networking
+LocalIP:                              Any
+RemoteIP:                             LocalSubnet
+Protocol:                             ICMPv6
+                                      Type    Code
+                                      132     Any 
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Core Networking - Multicast Listener Done (ICMPv6-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Core Networking
+LocalIP:                              Any
+RemoteIP:                             LocalSubnet
+Protocol:                             ICMPv6
+                                      Type    Code
+                                      132     Any 
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Core Networking - Multicast Listener Report v2 (ICMPv6-Out)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             Core Networking
+LocalIP:                              Any
+RemoteIP:                             LocalSubnet
+Protocol:                             ICMPv6
+                                      Type    Code
+                                      143     Any 
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Core Networking - Multicast Listener Report v2 (ICMPv6-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Core Networking
+LocalIP:                              Any
+RemoteIP:                             LocalSubnet
+Protocol:                             ICMPv6
+                                      Type    Code
+                                      143     Any 
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Core Networking - Multicast Listener Report (ICMPv6-Out)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             Core Networking
+LocalIP:                              Any
+RemoteIP:                             LocalSubnet
+Protocol:                             ICMPv6
+                                      Type    Code
+                                      131     Any 
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Core Networking - Multicast Listener Report (ICMPv6-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Core Networking
+LocalIP:                              Any
+RemoteIP:                             LocalSubnet
+Protocol:                             ICMPv6
+                                      Type    Code
+                                      131     Any 
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Core Networking - Multicast Listener Query (ICMPv6-Out)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             Core Networking
+LocalIP:                              Any
+RemoteIP:                             LocalSubnet
+Protocol:                             ICMPv6
+                                      Type    Code
+                                      130     Any 
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Core Networking - Multicast Listener Query (ICMPv6-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Core Networking
+LocalIP:                              Any
+RemoteIP:                             LocalSubnet
+Protocol:                             ICMPv6
+                                      Type    Code
+                                      130     Any 
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Core Networking - Router Solicitation (ICMPv6-Out)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             Core Networking
+LocalIP:                              Any
+RemoteIP:                             LocalSubnet,fe80::/64,ff02::2-ff02::2
+Protocol:                             ICMPv6
+                                      Type    Code
+                                      133     Any 
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Core Networking - Router Solicitation (ICMPv6-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Core Networking
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             ICMPv6
+                                      Type    Code
+                                      133     Any 
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Core Networking - Router Advertisement (ICMPv6-Out)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             Core Networking
+LocalIP:                              fe80::/64
+RemoteIP:                             LocalSubnet,fe80::/64,ff02::1-ff02::1
+Protocol:                             ICMPv6
+                                      Type    Code
+                                      134     Any 
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Core Networking - Router Advertisement (ICMPv6-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Core Networking
+LocalIP:                              Any
+RemoteIP:                             fe80::/64
+Protocol:                             ICMPv6
+                                      Type    Code
+                                      134     Any 
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Core Networking - Neighbor Discovery Advertisement (ICMPv6-Out)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             Core Networking
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             ICMPv6
+                                      Type    Code
+                                      136     Any 
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Core Networking - Neighbor Discovery Advertisement (ICMPv6-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Core Networking
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             ICMPv6
+                                      Type    Code
+                                      136     Any 
+Edge traversal:                       Yes
+Action:                               Allow
+
+Rule Name:                            Core Networking - Neighbor Discovery Solicitation (ICMPv6-Out)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             Core Networking
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             ICMPv6
+                                      Type    Code
+                                      135     Any 
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Core Networking - Neighbor Discovery Solicitation (ICMPv6-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Core Networking
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             ICMPv6
+                                      Type    Code
+                                      135     Any 
+Edge traversal:                       Yes
+Action:                               Allow
+
+Rule Name:                            Core Networking - Parameter Problem (ICMPv6-Out)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             Core Networking
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             ICMPv6
+                                      Type    Code
+                                      4       Any 
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Core Networking - Parameter Problem (ICMPv6-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Core Networking
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             ICMPv6
+                                      Type    Code
+                                      4       Any 
+Edge traversal:                       Yes
+Action:                               Allow
+
+Rule Name:                            Core Networking - Time Exceeded (ICMPv6-Out)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             Core Networking
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             ICMPv6
+                                      Type    Code
+                                      3       Any 
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Core Networking - Time Exceeded (ICMPv6-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Core Networking
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             ICMPv6
+                                      Type    Code
+                                      3       Any 
+Edge traversal:                       Yes
+Action:                               Allow
+
+Rule Name:                            Core Networking - Packet Too Big (ICMPv6-Out)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             Core Networking
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             ICMPv6
+                                      Type    Code
+                                      2       Any 
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Core Networking - Packet Too Big (ICMPv6-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Core Networking
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             ICMPv6
+                                      Type    Code
+                                      2       Any 
+Edge traversal:                       Yes
+Action:                               Allow
+
+Rule Name:                            Core Networking - Destination Unreachable (ICMPv6-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Core Networking
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             ICMPv6
+                                      Type    Code
+                                      1       Any 
+Edge traversal:                       Yes
+Action:                               Allow
+
+Rule Name:                            Performance Logs and Alerts (DCOM-In)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            In
+Profiles:                             Domain
+Grouping:                             Performance Logs and Alerts
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            135
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Performance Logs and Alerts (TCP-In)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            In
+Profiles:                             Domain
+Grouping:                             Performance Logs and Alerts
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            Any
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Performance Logs and Alerts (DCOM-In)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            In
+Profiles:                             Private,Public
+Grouping:                             Performance Logs and Alerts
+LocalIP:                              Any
+RemoteIP:                             LocalSubnet
+Protocol:                             TCP
+LocalPort:                            135
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Performance Logs and Alerts (TCP-In)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            In
+Profiles:                             Private,Public
+Grouping:                             Performance Logs and Alerts
+LocalIP:                              Any
+RemoteIP:                             LocalSubnet
+Protocol:                             TCP
+LocalPort:                            Any
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Key Management Service (TCP-In)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Key Management Service
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            1688
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Remote Event Log Management (RPC-EPMAP)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Remote Event Log Management
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            RPC-EPMap
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Remote Event Log Management (NP-In)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Remote Event Log Management
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            445
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Remote Event Log Management (RPC)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Remote Event Log Management
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            RPC
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            iSCSI Service (TCP-Out)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             iSCSI Service
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            Any
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            iSCSI Service (TCP-In)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             iSCSI Service
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            Any
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Remote Volume Management (RPC-EPMAP)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Remote Volume Management
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            RPC-EPMap
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Remote Volume Management - Virtual Disk Service Loader (RPC)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Remote Volume Management
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            RPC
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Remote Volume Management - Virtual Disk Service (RPC)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Remote Volume Management
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            RPC
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Routing and Remote Access (PPTP-Out)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             Routing and Remote Access
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            Any
+RemotePort:                           1723
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Routing and Remote Access (PPTP-In)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Routing and Remote Access
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            1723
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Routing and Remote Access (L2TP-Out)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             Routing and Remote Access
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             UDP
+LocalPort:                            Any
+RemotePort:                           1701
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Routing and Remote Access (L2TP-In)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Routing and Remote Access
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             UDP
+LocalPort:                            1701
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Routing and Remote Access (GRE-Out)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             Routing and Remote Access
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             47
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Routing and Remote Access (GRE-In)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Routing and Remote Access
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             47
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Remote Desktop - Shadow (TCP-In)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Remote Desktop
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            Any
+RemotePort:                           Any
+Edge traversal:                       Defer to application
+Action:                               Allow
+
+Rule Name:                            Remote Desktop - User Mode (UDP-In)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Remote Desktop
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             UDP
+LocalPort:                            3389
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Remote Desktop - User Mode (TCP-In)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Remote Desktop
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            3389
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            BranchCache Hosted Cache Client (HTTP-Out)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             BranchCache - Hosted Cache Client (Uses HTTPS)
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            Any
+RemotePort:                           80,443
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            BranchCache Hosted Cache Server(HTTP-Out)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             BranchCache - Hosted Cache Server (Uses HTTPS)
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            80,443
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            BranchCache Hosted Cache Server (HTTP-In)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             BranchCache - Hosted Cache Server (Uses HTTPS)
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            80,443
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            BranchCache Peer Discovery (WSD-Out)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             BranchCache - Peer Discovery (Uses WSD)
+LocalIP:                              Any
+RemoteIP:                             LocalSubnet
+Protocol:                             UDP
+LocalPort:                            Any
+RemotePort:                           3702
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            BranchCache Peer Discovery (WSD-In)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             BranchCache - Peer Discovery (Uses WSD)
+LocalIP:                              Any
+RemoteIP:                             LocalSubnet
+Protocol:                             UDP
+LocalPort:                            3702
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            BranchCache Content Retrieval (HTTP-Out)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             BranchCache - Content Retrieval (Uses HTTP)
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            Any
+RemotePort:                           80
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            BranchCache Content Retrieval (HTTP-In)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             BranchCache - Content Retrieval (Uses HTTP)
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            80
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Windows Remote Management - Compatibility Mode (HTTP-In)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Windows Remote Management (Compatibility)
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            80
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Windows Remote Management (HTTP-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Public
+Grouping:                             Windows Remote Management
+LocalIP:                              Any
+RemoteIP:                             LocalSubnet
+Protocol:                             TCP
+LocalPort:                            5985
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Windows Remote Management (HTTP-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private
+Grouping:                             Windows Remote Management
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            5985
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Remote Scheduled Tasks Management (RPC-EPMAP)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Remote Scheduled Tasks Management
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            RPC-EPMap
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Remote Scheduled Tasks Management (RPC)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Remote Scheduled Tasks Management
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            RPC
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            File and Printer Sharing over SMBDirect (iWARP-In)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             File and Printer Sharing over SMBDirect
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            5445
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Secure Socket Tunneling Protocol (SSTP-In)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Secure Socket Tunneling Protocol
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            443
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Netlogon Service Authz (RPC)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Netlogon Service
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            RPC
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Netlogon Service (NP-In)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Netlogon Service
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            445
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            AllJoyn Router (UDP-Out)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            Out
+Profiles:                             Domain,Private
+Grouping:                             AllJoyn Router
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             UDP
+LocalPort:                            Any
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            AllJoyn Router (UDP-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private
+Grouping:                             AllJoyn Router
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             UDP
+LocalPort:                            Any
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            AllJoyn Router (TCP-Out)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            Out
+Profiles:                             Domain,Private
+Grouping:                             AllJoyn Router
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            Any
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            AllJoyn Router (TCP-In)
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            In
+Profiles:                             Domain,Private
+Grouping:                             AllJoyn Router
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            9955
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Network Discovery (Pub WSD-Out)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             Network Discovery
+LocalIP:                              Any
+RemoteIP:                             LocalSubnet
+Protocol:                             UDP
+LocalPort:                            Any
+RemotePort:                           3702
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Network Discovery (Pub-WSD-In)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Network Discovery
+LocalIP:                              Any
+RemoteIP:                             LocalSubnet
+Protocol:                             UDP
+LocalPort:                            3702
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Network Discovery (LLMNR-UDP-Out)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             Network Discovery
+LocalIP:                              Any
+RemoteIP:                             LocalSubnet
+Protocol:                             UDP
+LocalPort:                            Any
+RemotePort:                           5355
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Network Discovery (LLMNR-UDP-In)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Network Discovery
+LocalIP:                              Any
+RemoteIP:                             LocalSubnet
+Protocol:                             UDP
+LocalPort:                            5355
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Network Discovery (WSD-Out)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             Network Discovery
+LocalIP:                              Any
+RemoteIP:                             LocalSubnet
+Protocol:                             UDP
+LocalPort:                            Any
+RemotePort:                           3702
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Network Discovery (WSD-In)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Network Discovery
+LocalIP:                              Any
+RemoteIP:                             LocalSubnet
+Protocol:                             UDP
+LocalPort:                            3702
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Network Discovery (UPnPHost-Out)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             Network Discovery
+LocalIP:                              Any
+RemoteIP:                             LocalSubnet
+Protocol:                             TCP
+LocalPort:                            Any
+RemotePort:                           2869
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Network Discovery (SSDP-Out)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             Network Discovery
+LocalIP:                              Any
+RemoteIP:                             LocalSubnet
+Protocol:                             UDP
+LocalPort:                            Any
+RemotePort:                           1900
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Network Discovery (SSDP-In)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Network Discovery
+LocalIP:                              Any
+RemoteIP:                             LocalSubnet
+Protocol:                             UDP
+LocalPort:                            1900
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Network Discovery (WSD Events-Out)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             Network Discovery
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            Any
+RemotePort:                           5357
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Network Discovery (WSD Events-In)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Network Discovery
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            5357
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Network Discovery (WSD EventsSecure-Out)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             Network Discovery
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            Any
+RemotePort:                           5358
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Network Discovery (WSD EventsSecure-In)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Network Discovery
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            5358
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Network Discovery (NB-Datagram-Out)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             Network Discovery
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             UDP
+LocalPort:                            Any
+RemotePort:                           138
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Network Discovery (NB-Datagram-In)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Network Discovery
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             UDP
+LocalPort:                            138
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Network Discovery (NB-Name-Out)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             Network Discovery
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             UDP
+LocalPort:                            Any
+RemotePort:                           137
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Network Discovery (NB-Name-In)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Network Discovery
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             UDP
+LocalPort:                            137
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Network Discovery (UPnP-Out)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             Network Discovery
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            Any
+RemotePort:                           2869
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Network Discovery (UPnP-In)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Network Discovery
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            2869
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Remote Event Monitor (RPC-EPMAP)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Remote Event Monitor
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            RPC-EPMap
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Remote Event Monitor (RPC)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Remote Event Monitor
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            RPC
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Connected User Experiences and Telemetry
+----------------------------------------------------------------------
+Enabled:                              Yes
+Direction:                            Out
+Profiles:                             Domain,Private,Public
+Grouping:                             DiagTrack
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            Any
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Inbound Rule for Remote Shutdown (RPC-EP-In)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Remote Shutdown
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            RPC-EPMap
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Inbound Rule for Remote Shutdown (TCP-In)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Remote Shutdown
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            RPC
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            SNMP Trap Service (UDP In)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            In
+Profiles:                             Domain
+Grouping:                             SNMP Trap
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             UDP
+LocalPort:                            162
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            SNMP Trap Service (UDP In)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            In
+Profiles:                             Private,Public
+Grouping:                             SNMP Trap
+LocalIP:                              Any
+RemoteIP:                             LocalSubnet
+Protocol:                             UDP
+LocalPort:                            162
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Virtual Machine Monitoring (RPC)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Virtual Machine Monitoring
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            RPC
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Virtual Machine Monitoring (NB-Session-In)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Virtual Machine Monitoring
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            139
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Virtual Machine Monitoring (Echo Request - ICMPv6-In)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Virtual Machine Monitoring
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             ICMPv6
+                                      Type    Code
+                                      Any     Any 
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Virtual Machine Monitoring (Echo Request - ICMPv4-In)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Virtual Machine Monitoring
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             ICMPv4
+                                      Type    Code
+                                      Any     Any 
+Edge traversal:                       No
+Action:                               Allow
+
+Rule Name:                            Virtual Machine Monitoring (DCOM-In)
+----------------------------------------------------------------------
+Enabled:                              No
+Direction:                            In
+Profiles:                             Domain,Private,Public
+Grouping:                             Virtual Machine Monitoring
+LocalIP:                              Any
+RemoteIP:                             Any
+Protocol:                             TCP
+LocalPort:                            135
+RemotePort:                           Any
+Edge traversal:                       No
+Action:                               Allow
+Ok.
+
