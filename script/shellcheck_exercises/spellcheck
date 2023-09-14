@@ -1,0 +1,12 @@
+#!/bin/bash
+
+DICT=/usr/share/dict/american-english
+FILE=$1
+
+cat $FILE |# read in the contents of the text file
+tr -d '[:punct:]' |# delete punctuation
+tr -s ' ' '\n' |# substitute spaces with newline chars
+tr '[:upper:]' '[:lower:]' |# 
+sort |# sort lines
+uniq |# return single instances of grouped identical lines
+egrep -xvf $DICT # -x match whole lines, -v select non-matching lines (invert the match); -f take patterns from file 

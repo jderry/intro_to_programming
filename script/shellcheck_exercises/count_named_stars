@@ -1,0 +1,8 @@
+#!/bin/bash
+
+FILE=$1
+
+zcat $FILE |# read in compressed text file contents
+tail +2 |# print out all lines except line 1 (the label line)
+gawk -F, 'length($7){print $7}' |# for each record, if not empty string in column 7, print column 7
+wc -l # word count, return line count only

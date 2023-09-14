@@ -1,0 +1,10 @@
+#!/bin/bash
+
+WEBLOG=$1
+
+cat $WEBLOG |# read in contents of weblog
+gawk '{print $1}' |# print out only column 1 of each record
+sort |# make identical ip addrs contiguous in output
+uniq -c |# for each group of contiguous ip addrs, print single instance plus count
+sort -n |# numerically sort, by default in ascending order
+tail
