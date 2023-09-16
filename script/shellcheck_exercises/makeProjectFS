@@ -3,8 +3,8 @@
 PROJPATH=$HOME/project
 PROJ=$1
 
-mkdir -p $PROJPATH/$PROJ/data/raw
-mkdir -p $PROJPATH/$PROJ/data/processed
+mkdir -p $PROJPATH/$PROJ/data/raw     
+mkdir -p $PROJPATH/$PROJ/data/processed     
 
 
 mkdir -p $PROJPATH/$PROJ/figure/exploratory
