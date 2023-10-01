@@ -1,13 +1,25 @@
 # first, we download the xz file for the python version we want
 wget https://www.python.org/ftp/python/PYTHONVERSIONNR/PYTHONVERSION.tar.xz
+
 # second, we untar the xz file. this will install a folder in our home directory
 tar -Jxf PYTHONVERSION.tar.xz
+
 # we cd into the folder
 cd PYTHONVERSION/
+
 # and now, we run the configure script, which builds a make file
 # note our options. we want the interpreter optimized to run on our hardware, and
 # we want it installed in our home directory
 ./configure --enable-optimizations --prefix=$HOME/.local
-# the -j option allows us to specify how many cores we want to commit to the compilation and linking
+
+# the -j option for the make command allows us to specify how many cores we want to commit to the compilation and linking
 make -j4
 make install
+
+# in .bashrc file, add these lines to the top of the file:
+alias python=python3
+alias pip=pip3
+PATH="$HOME/.local/bin:$PATH"
+
+# afterwards, source the file
+source .bashrc
