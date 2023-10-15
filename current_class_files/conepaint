@@ -1,0 +1,56 @@
+#!/usr/bin/python3
+'''This program uses functions as subroutines
+   and shows how one can group code into subroutines
+   following the break down of the code in a top-down design.
+   
+   This program has been designed to run as
+   an executable script on a shell command line (bash).
+'''
+
+# this built-in module provides access to the runtime environment
+# of the python interpreter.
+# in this program, we use it to allow us to take arguments
+# off the command line when we invoke the program in bash.
+import sys
+
+# the subroutines are written first.
+# the main routine is written last.
+# because functions must be loaded into memory
+# BEFORE they can be invoked,
+# write the subroutines in the order
+# in which they first show up in the top-down design
+
+def convertDim2Feet(inches:(int, float)) -> (int, float):
+    return inches/12
+
+def computeSurfaceArea(height:(int, float), radius:(int, float)) -> float:
+    return 3.14 * radius * (radius**2 + height**2)**(1/2)
+
+def computeCostsByColor(area: float) -> dict:
+    return {'red': area * .10, 'blue': area * .15, 'green': area * .18}
+
+def printResults(area: float, costDict: dict):
+    print(f"\nThe surface area of the cone is: {area: 5.2f} square ft.")
+    print("\nPainting it:")
+    for color, cost in costDict.items():
+        print(f"{color:<6}" + " will cost " + f" ${cost:>5.2f}.")
+
+def conePaint(coneHeight, coneDiameter):
+    '''Given cone height and cone diameter in inches,
+       print the surface area of the cone, as well as the cost of
+       painting it in the colors in the cost dictionary.
+    '''
+    # garbage filter
+    assert (isinstance(coneHeight, int) or isinstance(coneHeight, float))\
+       and (coneHeight > 0), "values must be positive numbers."
+    assert (isinstance(coneDiameter, int) or isinstance(coneDiameter, float))\
+       and (coneDiameter > 0), "values must be positive numbers."
+    # garbage filter
+    radius = convertDim2Feet(coneDiameter/2)
+    height = convertDim2Feet(coneHeight)
+    area = computeSurfaceArea(height, radius)
+    costDict = computeCostsByColor(area)
+    printResults(area, costDict)
+
+conePaint(float(sys.argv[1]), float(sys.argv[2]))
+
