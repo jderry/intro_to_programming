@@ -4,7 +4,7 @@ import unittest
 reference: https://docs.python.org/3/library/unittest.html
 '''
 '''
-this template uses a module and a function we created in class to aid comprehension.
+this template uses a module and a function we create in class to aid comprehension.
 '''
 
 # 1. get the function to test.

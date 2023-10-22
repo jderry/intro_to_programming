@@ -143,11 +143,11 @@ def str2numLoL(LoL:list, index:int) -> list:
     return LoL
 
 def getMinMaxLoL(LoL: list, index:int) -> tuple:
-    ''''Given a list-of-lists and the index of a column in the LoL of numbers as input,
+    '''Given a list-of-lists and the index of a column in the LoL of numbers as input,
         return a tuple containing the largest and smallest numbers in the column.
         >>>getMinMaxLoL(LoL, 2) # reformatted_Unigene.fa is the LoL
         (200, 6616)
-    ''''
+    '''
     arry = []
     for record in LoL:
         arry.append(record[index])
