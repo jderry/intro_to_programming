@@ -1,4 +1,4 @@
 # here, we install the tools and libraries necessary to compile the python interpreter on ubuntu
 # as well as the libraries to give the python interpreter full functionality
-sudo apt install vim libffi-dev zlib1g-dev tklib libreadline-dev python3-tk python3-tk-dbg tix liblzma-dev libblkid-dev lib64readline-dev build-essential libssl-dev checkinstall libncursesw5-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev libgdbm-compat-dev xz-utils
+sudo apt install vim libffi-dev zlib1g-dev tklib libreadline-dev python3-tk python3-tk-dbg tix liblzma-dev libblkid-dev libreadline-dev build-essential libssl-dev checkinstall libncursesw5-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev libgdbm-compat-dev xz-utils
 
