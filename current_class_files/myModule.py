@@ -1,53 +1,46 @@
-''' functions created in class
 '''
-def isNuclStrClean(nuclStr: str) -> bool|dict:
-    ''' Given a nucleotide string as input,
-        return bool True if clean;
-        otherwise, returns a dictionary of index/value pairs
-        showing where in string there's a non-nucleotide,
-        as well as the symbol in that position.
+'''
+def get_min_max(array: list|tuple) -> tuple:
+    '''Given an unordered array of numbers, 
+       return the largest and smallest numbers in the array.
     '''
-    badValues = {}
-    for index, value in enumerate(nuclStr):
-        if value not in 'ACGTacgt':
-            badValues[index] = value
-    if badValues:
-        return badValues
-    else:
-        return True
+    # garbage filter goes here
+    # implementation of the algorithm
+    minVal, maxVal = float('inf'), float('-inf')
+    for number in array:
+        if number < minVal:
+            minVal = number
+        if number > maxVal:
+            maxVal = number
+    return minVal, maxVal
 
-def get_revcompl(nuclStr: str) -> str:
-    ''' Given a nucleotide string as input,
-        return its reverse complement.
-        If nucleotide string is not clean,
-        return a dictionary of index/value pairs
-        showing where in string there's a non-nucleotide,
-        as well as the symbol in that position.
+def read_records_from_tab_datafile(file: str) -> list:
+    '''Given a string that is the filepath to a tabular datafile as input,
+       return the contents of the datafile as a list-of-tuples as output.
     '''
-    from myModule import isNuclStrClean
-    isClean = isNuclStrClean(nuclStr)
-    assert isinstance(isClean, bool), f"input string has non-nucleotide symbols at these index positions:\n\t\t{isClean}"
-    # revcompl algorithm implemented
-    complDict = {'A':'T', 'C':'G', 'G':'C', 'T':'A'}
-    outputStr = ''
-    for nucleotide in nuclStr:
-        outputStr = complDict[nucleotide] + outputStr
-    return outputStr
+    # garbage filter goes here
+    # tests if file exists, tests if a text file
+    with open(file, 'r') as inFile:
+        LoS = inFile.read().splitlines()
+        LoT = []
+        for record in LoS:
+            LoT.append(tuple(record.split()))
+    return LoT
 
-def testFunc(testArg:str) -> str:
-    if not isinstance(testArg, str):
-        print('please enter string as input')
-        return
-    return testArg
-
-def euclid_gcd(natA: int, natB: int) -> int:
-    ''' Given two natural numbers as input, returns their greatest common divisor.
-        >>> euclid_gcd(53667, 25527)
-        201
+def get_min_max_rec(array: list|tuple) -> tuple:
+    '''Given an unordered array of numbers, 
+       return the largest and smallest numbers in the array.
     '''
-    assert isinstance(natA, int) and (natA > 0), "natA must be a natural number greater than 0"
-    assert isinstance(natB, int) and (natB > 0), "natB must be a natural number greater than 0" 
-    while natB: # while natB is NOT zero
-        natA, natB = natB, natA % natB
-    return natA
+    # garbage filter goes here
+    # implementation of the algorithm
+    minRec, maxRec = [], []
+    minVal, maxVal = float('inf'), float('-inf')
+    for index, number in enumerate(array):
+        if number < minVal:
+            minVal = number
+            minRec = [index, minVal]
+        if number > maxVal:
+            maxVal = number
+            maxRec = [index, maxVal]
+    return minRec, maxRec
 
