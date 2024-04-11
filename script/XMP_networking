@@ -1,0 +1,35 @@
+#!/usr/bin/python3.10
+
+''' This script takes no input, pulls the xmp-api json of cns hosts on the UT network,
+    converts the dictionary records into a single pandas dataframe;
+    and writes out the dataframe as a csv whose filename includes the datetime
+    that the script runs.
+'''
+# https to pull json
+# https://<URL>/api/clientAddress?pastHours=12&XMPAPIKEY=<API KEY GOES HERE>
+
+# from built-in libraries and pandas,
+# import the necessary functions
+import urllib.request, json
+from pandas import DataFrame
+from time import gmtime, strftime
+
+''' this executable script does essentially four things, in this order:
+    1) downloads the client data from gw.utexas.edu,
+       each client record in a dictionary
+    2) creates a pandas dataframe from the client data
+    3) makes a datetime string
+    4) writes out to the working directory 
+       the contents of the dataframe as a csv,
+       with a filename that includes the datetime string
+'''
+
+with urllib.request.urlopen("https://<URL>/api/clientAddress?pastHours=12&XMPAPIKEY=<API KEY GOES HERE>") as url:
+    download = json.load(url)
+
+# in creating dataframe, make columns from the key/value pairs of the dictionaries
+df = DataFrame.from_dict(download['data'], orient='columns')
+
+now_str = strftime("%Y-%m-%d_%H%M%S", gmtime())
+
+df.to_csv('network' + now_str  + '.csv', index=False)
