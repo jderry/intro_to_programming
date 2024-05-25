@@ -1,17 +1,19 @@
 import unittest
 
 '''
+this is a template of a unit test module.
 reference: https://docs.python.org/3/library/unittest.html
 '''
 '''
 this template uses a module and a function we created in class to aid comprehension.
+name your actual unit test module "test_<MODULE WE'RE TESTING>.py"
 '''
 
-# 1. get the function to test.
+# 1. get the function to test or import the module to test.
 from myModule import revCompl
 
 # 2. create a class into which we pass the unit tests we want to perform.
-class myModuleTests(unittest.TestCase):
+class Test_revCompl(unittest.TestCase):
 
    # 3. create a method for each garbage_filter test to perform.    
    def test_garbage_filter_1(self):
@@ -26,6 +28,10 @@ class myModuleTests(unittest.TestCase):
        # here, the test ensures that output of the function is indeed the expected output.
        self.assertEqual(result, "tgtaatc")
 
-# 5. finally, we run the unit tests defined within the class.
+# 5. we run the unit tests defined within the class.
 # we can modify verbosity level (default=1) to get more or less info as tests run. 
-unittest.main(verbosity=2)
+#unittest.main(verbosity=2)
+
+# 6. we set up our unit tests so we can invoke them off the bash command line
+if __name__ == '__main__':
+    unittest.main()
