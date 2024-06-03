@@ -1,7 +1,0 @@
-1) specification: create a new function that, given an array of ints or floats (not exclusive-or --- in other words, the array can include both ints and floats), returns two LoTs, one that holds the index/value pairs of all the smallest values in the array, and one that holds the index/value pairs of all the largest values in the array.
-after testing your function to make sure it works, pass in the array of nucleotide string lengths from our reformatted fasta file; and find out how many records with smallest lengths of 200 nucleotides there are, and how many with largest lengths there are.
-email me your answer.
-
-2) specification: given the formula for getting percent gc content, find out how many smallest and greatest percent gc content values map to smallest lengths of 200 nucleotides.
-
-3) specification: write a function that can act as a garbage filter in the get_min_max() function. in other words, write a function that ensures that input is either a list or tuple of ints or floats. 
