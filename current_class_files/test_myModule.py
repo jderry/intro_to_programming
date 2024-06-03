@@ -15,20 +15,20 @@ from myModule import euclid_gcd, rev_compl
 # 2. create a class into which we pass the unit tests we want to perform.
 class Test_myModule(unittest.TestCase):
 
-   # 3. create a method for each garbage_filter test to perform.    
+   #### euclid_gcd unit tests #####
    def test_euclid_gcd_garbage_filter_1(self):
         ''' assert input must be a string
         '''
         with self.assertRaises(AssertionError):
             euclid_gcd(53667., 25527)
    
-   # 4. create a method for each test to perform.
+   # create a method for each test to perform.
    def test_euclid_gcd(self):
        result = euclid_gcd(53667, 25527)
        # here, the test ensures that output of the function is indeed the expected output.
        self.assertEqual(result, 201)
 
-   # 3. create a method for each garbage_filter test to perform.    
+   ##### rev_compl unit tests #####
    def test_rev_compl_garbage_filter_1(self):
         ''' assert input must be a string
         '''
@@ -41,11 +41,10 @@ class Test_myModule(unittest.TestCase):
            with a) dictionary of index/non-nucleotide pairs,
            and b) string that explains the dictionary
        '''
-       result = rev_compl('gattaxa')
-       # here, the test ensures that output of the function is indeed the expected output.
-       self.assertEqual(result, ({5:'x'}, "this is a dictionary of non-nucleotides in the input string, and their index positions in the string."))
+       with self.assertRaises(AssertionError):
+           rev_compl('gattaxa')
 
-   # 4. create a method for each test to perform.
+   # create a method for each test to perform.
    def test_rev_compl(self):
        result = rev_compl('gattaca')
        # here, the test ensures that output of the function is indeed the expected output.
