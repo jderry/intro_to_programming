@@ -30,7 +30,7 @@ def rev_compl(nuclStr: str) -> str:
     for index, value in enumerate(nuclStr):
         if value not in 'acgtACGT':
             bad_values[index] = value
-    assert not bad_values, f"this is a dictionary of non-nucleotides in the input string, and their index positions in the string:\n{bad_values}"
+    assert not bad_values, f"below is a dictionary of non-nucleotides in the input string, and their index positions in the string:\n{bad_values}"
     
     # implementation of the algorithm
     outputStr, complDict = '', {'a':'t', 'c':'g', 'g':'c', 't':'a'}
