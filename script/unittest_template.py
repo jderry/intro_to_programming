@@ -1,19 +1,19 @@
 import unittest
 
 '''
-this is a template of a unit test module.
+this is a template of a unit test scirpt.
 reference: https://docs.python.org/3/library/unittest.html
 '''
 '''
-this template uses a module and a function we created in class to aid comprehension.
-name your actual unit test module "test_<MODULE WE'RE TESTING>.py"
+this template uses a FILE (module or script) and a function we created in class to aid comprehension.
+name your actual unit test script "test_<FILE WE'RE TESTING>.py"
 '''
 
 # 1. get the function to test or import the module to test.
-from MODULE import FUNC
+from FILE import FUNC
 
 # 2. create a class into which we pass the unit tests we want to perform.
-class Test_MODULE(unittest.TestCase):
+class Test_FILE(unittest.TestCase):
 
    # 3. create a method for each garbage_filter test to perform.    
    def test_GARBAGE_FILTER_1(self):
