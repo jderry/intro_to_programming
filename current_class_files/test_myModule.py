@@ -10,10 +10,23 @@ name your actual unit test module "test_<myModule WE'RE TESTING>.py"
 '''
 
 # 1. get the function to test or import the module to test.
-from myModule import euclid_gcd, rev_compl
+from myModule import euclid_gcd, rev_compl, ensureNuclStrClean
 
 # 2. create a class into which we pass the unit tests we want to perform.
 class Test_myModule(unittest.TestCase):
+
+   #### ensureNuclStrClean tests ####
+   def test_ensureNuclStrClean_garbage_filter_1(self):
+        ''' assert input must be a string
+        '''
+        with self.assertRaises(AssertionError):
+            ensureNuclStrClean(2.3)
+
+   def test_ensureNuclStrClean(self):
+        ''' assert input must be a string
+        '''
+        with self.assertRaises(AssertionError):
+            ensureNuclStrClean('gxttxca')
 
    #### euclid_gcd unit tests #####
    def test_euclid_gcd_garbage_filter_1(self):
