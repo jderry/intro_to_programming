@@ -23,7 +23,7 @@ class Test_myModule(unittest.TestCase):
             ensureNuclStrClean(2.3)
 
    def test_ensureNuclStrClean(self):
-        ''' assert input must be a string
+        ''' assert input must be a clean nucleotide string
         '''
         with self.assertRaises(AssertionError):
             ensureNuclStrClean('gxttxca')
