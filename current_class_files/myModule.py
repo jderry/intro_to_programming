@@ -1,4 +1,16 @@
 # coding: utf-8
+
+def ensureNuclStrClean(nuclStr: str):
+    # garbage filter, ensure input is a string
+    assert isinstance(nuclStr, str), "input must be a clean nucleotide string"
+    
+    # implementation of the algorithm
+    bad_values = {}
+    for index, value in enumerate(nuclStr):
+        if value not in 'acgtACGT':
+            bad_values[index] = value
+    assert not bad_values, f"below is a dictionary of non-nucleotides in the input string, and their index positions in the string:\n{bad_values}"
+
 def euclid_gcd(natA: int, natB: int) -> int:
     ''' Returns the greatest common divisor of two natural numbers.
         >>>euclid_gcd(53667, 25527)
@@ -26,11 +38,8 @@ def rev_compl(nuclStr: str) -> str:
     # ensure only nucleotides are in nuclStr
     # if non-nucleotide symbols are in string,
     # return dictionary of index/non-nucleotide pairs in string.
-    bad_values = {}
-    for index, value in enumerate(nuclStr):
-        if value not in 'acgtACGT':
-            bad_values[index] = value
-    assert not bad_values, f"below is a dictionary of non-nucleotides in the input string, and their index positions in the string:\n{bad_values}"
+    from myModule import ensureNuclStrClean
+    ensureNuclStrClean(nuclStr)
     
     # implementation of the algorithm
     outputStr, complDict = '', {'a':'t', 'c':'g', 'g':'c', 't':'a'}
