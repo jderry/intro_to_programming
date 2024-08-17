@@ -16,9 +16,11 @@ cd PYTHONVERSION/
 make -j4
 make install
 
+# in $HOME/.local/bin, create symbolic links
+ln -s python python3
+ln -s pip pip3
+
 # in .bashrc file, add these lines to the top of the file:
-alias python=python3
-alias pip=pip3
 PATH="$HOME/.local/bin:$PATH"
 
 # afterwards, source the file
