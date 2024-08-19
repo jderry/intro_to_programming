@@ -1,3 +1,2 @@
 # intro_to_programming
-datasets and other files for the intro_to_programming class,</p>
-cns, ut-austin
+datasets and other files for the intro_to_programming class, ut-austin
