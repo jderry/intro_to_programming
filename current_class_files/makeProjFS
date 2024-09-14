@@ -1,0 +1,16 @@
+#!/bin/bash
+
+PROJPATH=$HOME/project
+PROJ=$1
+
+mkdir -p $PROJPATH/$PROJ/data/raw
+mkdir -p $PROJPATH/$PROJ/data/processed
+
+mkdir -p $PROJPATH/$PROJ/figure/exploratory
+mkdir -p $PROJPATH/$PROJ/figure/final
+
+mkdir -p $PROJPATH/$PROJ/script/raw
+mkdir -p $PROJPATH/$PROJ/script/final
+
+mkdir -p $PROJPATH/$PROJ/text/readme
+mkdir -p $PROJPATH/$PROJ/text/text_of_analysis
