@@ -1,48 +1,55 @@
-# coding: utf-8
+''' module used in class.
+'''
 
-def ensureNuclStrClean(nuclStr: str):
-    # garbage filter, ensure input is a string
-    assert isinstance(nuclStr, str), "input must be a clean nucleotide string"
-    
-    # implementation of the algorithm
-    bad_values = {}
-    for index, value in enumerate(nuclStr):
-        if value not in 'acgtACGT':
-            bad_values[index] = value
-    assert not bad_values, f"below is a dictionary of non-nucleotides in the input string, and their index positions in the string:\n{bad_values}"
+def get_percent_gc_content(nuclStr: str) -> float:
+    ''' Given a nucleotide string as input,
+        return its percent g-c content as a float.
 
-def euclid_gcd(natA: int, natB: int) -> int:
-    ''' Returns the greatest common divisor of two natural numbers.
+        >>>get_percent_gc_content('gattaca')
+        28.571428571428573
+    '''
+    assert isinstance(nuclStr, str), "argument must be a clean nucleotide string."
+    badValues = {}
+    for index, letter in enumerate(nuclStr):
+        if letter not in 'actgACTG':
+            badValues[index] = letter
+    assert not badValues, f"nucleotide string at these positions has bad values\n{badValues}"
+    # implementation of algorithm
+    nuclStr = nuclStr.lower()
+    return 100 * (nuclStr.count('c') + nuclStr.count('g')) / len(nuclStr)
+
+def euclid_gcd(nat_a: int, nat_b: int) -> int:
+    ''' Given two natural numbers,
+        return their greatest common divisor.
+
         >>>euclid_gcd(53667, 25527)
         201
     '''
-    # garbage filter
-    assert isinstance(natA, int) and isinstance(natB, int)\
-                  and (natA > 0) and (natB > 0),\
-           "arguments must be natural numbers greater than zero."
-
+    assert isinstance(nat_a, int) and nat_a > 0\
+       and isinstance(nat_b, int) and nat_b > 0,\
+       "input must be two integers greater than zero."
     # implementation of algorithm
-    while natB:
-        natA, natB = natB, natA % natB
+    while nat_b:
+        nat_a, nat_b = nat_b, nat_a % nat_b
+    
+    return nat_a
 
-    return natA
-    
 def rev_compl(nuclStr: str) -> str:
-    ''' Returns the reverse complement of a nucleotide string.
+    ''' Given a clean nucleotide string as input,
+        return its reverse complement.
+
         >>>rev_compl('gattaca')
-        'tgaatc'
+        'tgtaatc'
     '''
-    # garbage filters
-    assert isinstance(nuclStr, str), "the argument must be a clean nucleotide string."
-    
-    # ensure only nucleotides are in nuclStr
-    # if non-nucleotide symbols are in string,
-    # return dictionary of index/non-nucleotide pairs in string.
-    from myModule import ensureNuclStrClean
-    ensureNuclStrClean(nuclStr)
-    
-    # implementation of the algorithm
-    outputStr, complDict = '', {'a':'t', 'c':'g', 'g':'c', 't':'a'}
+    assert isinstance(nuclStr, str),\
+           "input must be a clean nucleotide string."
+    badValues = {}
+    for index, letter in enumerate(nuclStr):
+        if letter not in 'ACGTacgt':
+            badValues[index] = value
+    assert not badValues, f"nucleotide string at these positions has bad values\n{badValues}"
+    # implementation of algorithm
+    complDict, outputStr = {'a':'t', 'A':'T', 'c':'g', 'C':'G', 'g':'c', 'G':'C', 't':'a', 'T':'A'}, ''
     for nucleotide in nuclStr:
         outputStr = complDict[nucleotide] + outputStr
     
