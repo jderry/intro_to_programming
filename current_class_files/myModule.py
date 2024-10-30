@@ -54,3 +54,58 @@ def rev_compl(nuclStr: str) -> str:
         outputStr = complDict[nucleotide] + outputStr
     
     return outputStr
+
+def get_symbol_count(someStr: str) -> dict:
+    ''' Given an arbitrary string as input,
+        return a dictionary of symbol:count items,
+        in which the symbols come from the string.
+    '''
+    assert isinstance(someStr, str),\
+        "input must be a string."
+    symbolDict = {} # initialization
+    for symbol in someStr:
+        try:
+            symbolDict[symbol] += 1 # increment symbol count
+        except KeyError:
+            # KeyError means key is not yet in dictionary,
+            # so add key:value pair to dictionary.
+            symbolDict[symbol] = 1
+
+    return symbolDict
+
+def is_iterable_w_comp_items(arry: list|tuple) -> bool:
+    try:
+        iter(arry)
+
+    except TypeError:
+        return False
+    
+    for index, value in enumerate(arry):
+        try:
+            if index < len(arry):
+                arry[index] > arry[index+1]
+            return True
+        except TypeError:
+            return False
+
+def min_max(arry: list|tuple) -> tuple:
+    ''' Given an iterable collection of items
+        that are comparable (gt, lt, etc),
+        return tuple containing smallest and biggest
+        items in collection.
+    '''
+    from myModule import is_iterable_w_comp_items
+    # garbage filter
+    assert is_iterable_w_comp_items(arry),\
+        ' '.join(["collection must be iterable AND",\
+             "its items must be comparable."])
+    # initialization
+    min_val, max_val = float('inf'), float('-inf')
+    # implementation of algorithm
+    for value in arry:
+        if value < min_val:
+            min_val = value
+        if value > max_val:
+            max_val = value
+    return min_val, max_val
+    
