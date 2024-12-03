@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# initialization
+DICT=/usr/share/dict/american-english
+MYDICT=~/my_dict
+
+# to do: create my_dict is it doesn't exist
+
+tr -d '[:punct:]' | # delete punctuation
+tr -s ' ' '\n' | # replacing spaces with newline characters 
+sort | # alphabetically sort the words in the input string
+uniq| # remove multiple instances of the same word
+egrep -xvf $DICT | # compare entire lines, return complement, run against dictionary file
+tr '[:upper:]' '[:lower:]' | # replace all uppercase letters with lowercase equiv. 
+egrep -xvf $DICT | # remove common words that are uppercased in input string 
+egrep -xvf $MYDICT # remove entries in our personal dictionary file

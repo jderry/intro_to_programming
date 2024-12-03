@@ -28,7 +28,8 @@ def get_percent_gc_content(nuclStr: str) -> float:
     '''
     assert isinstance(nuclStr, str), "argument must be a clean nucleotide string."
     from myModule import ensure_nucl_str_clean
-    assert not ensure_nucl_str_clean(nuclStr), f"nucleotide string at these positions has bad values\n{badValues}"
+    badValues = ensure_nucl_str_clean(nuclStr)
+    assert not badValues, f"nucleotide string at these positions has bad values\n{badValues}"
     # implementation of algorithm
     nuclStr = nuclStr.lower()
     return 100 * (nuclStr.count('c') + nuclStr.count('g')) / len(nuclStr)
@@ -66,7 +67,8 @@ def rev_compl(nuclStr: str) -> str:
     assert isinstance(nuclStr, str),\
            "input must be a clean nucleotide string."
     from myModule import ensure_nucl_str_clean
-    assert not ensure_nucl_str_clean(nuclStr), f"nucleotide string at these positions has bad values\n{badValues}"
+    badValues = ensure_nucl_str_clean(nuclStr)
+    assert not badValues, f"nucleotide string at these positions has bad values\n{badValues}"
     # implementation of algorithm
     complDict, outputStr = {'a':'t', 'A':'T', 'c':'g', 'C':'G', 'g':'c', 'G':'C', 't':'a', 'T':'A'}, ''
     for nucleotide in nuclStr:

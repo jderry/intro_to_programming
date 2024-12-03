@@ -1,0 +1,50 @@
+''' these recursive functions should be run in python tutor visualizer @
+    https://pythontutor.com/visualize.html#mode=edit
+    copy/paste a function into the visualizer, invoke the function
+    in the same window, then hit the `Visualize Execution' button.
+    step through the visualizer to get an idea of how python uses
+    a stack to run recursive functions.
+'''
+
+def recursFactorial(n):
+    productValue = 1
+    if n > 1: # general case
+        productValue = n * recursFactorial(n - 1)
+    return productValue
+    
+def recursEuclidGCD(u, v):
+    if u % v: # general case
+        return recursEuclidGCD(v, u % v)
+    else: # base case
+        return v
+        
+def recursFibonacci(index):
+    if index < 2: # base case
+        return index
+    else: # general case
+        return recursFibonacci(index - 1) + recursFibonacci(index - 2)
+        
+##### memoized fibonacci #####
+memoTable = {}
+
+def memoizedFib(n):
+    if n <= 2: # base cases
+        return 1
+    # begin general case
+    if n in memoTable:
+        return memoTable[n]
+    memoTable[n] = memoizedFib(n - 1) + memoizedFib(n - 2)
+    return memoTable[n]
+
+##### memoized fibonacci #####
+
+def quick_sort(l: list) -> list:
+   ''' Given unsorted list as input,
+       returns the listed, sorted.
+   '''
+   if len(l) <= 1: # base case
+       return l
+   else: # general case
+       return quick_sort([e for e in l[1:] if e <= l[0]])\
+            + [l[0]] \
+            + quick_sort([e for e in l[1:] if e > l[0]])

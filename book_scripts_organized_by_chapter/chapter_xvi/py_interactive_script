@@ -1,0 +1,15 @@
+#!/usr/bin/python3
+
+import os
+
+while True:
+	proj = input('please give project name: ')
+
+	if proj == '':
+		break
+
+	os.makedirs(proj)
+
+print("and now we're out of the loop!")
+
+
