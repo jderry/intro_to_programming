@@ -1,0 +1,141 @@
+#lesson 43
+from datetime import date
+date1, date2= date(2020, 3, 11), date(2023, 5, 11)
+(date2 - date1).days
+
+#lesson 44
+from datetime import date
+date1, today = date(2007, 3, 29), date.today()
+print((today - date1).days)
+print(date1.strftime('%A'))
+
+bro_birthdate = date(2010, 6, 10)
+difference = bro_birthdate - date1
+date1 + (2 * difference)
+
+#lesson 45
+from numpy import array
+h, A, T = .47, 30, array([15, 22, 65, 38, 27, 45])
+q = h * A * T; print(q)
+
+#lesson46
+nuclStr = 'gattacagattaca'
+nuclStr = nuclStr.lower()
+gc_content_per = 100 * ((nuclStr.count('g') \
+                       + nuclStr.count('c'))\
+                       / len(nuclStr))
+print(f"{gc_content_per:4.2f}%")
+
+#lesson47
+from sympy import *
+x1, x2, x3 = symbols('x1 x2 x3')
+A, b, x = Matrix([4, 0, -1, 0, 2, -5, 0, 0, 1]).reshape(3, 3),\
+                (0, 0, 1), (x1, x2, x3)
+from sympy.solvers.solveset import linsolve
+system = A, b
+(ans) = linsolve(system, x); print(ans)
+
+#lesson 48
+import pint
+ur = pint.UnitRegistry()
+Q_ = ur.Quantity
+P = (1.008 * ur.bar).to('atm')
+V = (4.4 * ur.cu_ft).to('liter')
+T = Q_(78, ur.degF).to('degK')
+R = 0.0821 * ur.liter * ur.atm / (ur.mol * ur.degK)
+n = P * V / (R * T)
+g_He = n * (4 * ur.g / ur.mol)
+sigFigs, numDigInt = 3, 2
+round(g_He, (sigFigs - numDigInt))
+
+g_He.magnitude
+g_He.units
+print(g_He.dimensionality)
+
+#lesson 49
+from math import log
+import pint
+ureg = pint.UnitRegistry()
+Q_ = ureg.Quantity
+m = 10 * ureg.gram
+M = 32 * ureg.gram / ureg.mole
+p_1 = 1 * ureg.atm
+p_2 = .3 * ureg.atm
+T = Q_(20, ureg.degC).to('degK')
+R = 8.314 * 10**7 * ureg.erg\
+    / (ureg.mole * ureg.degree_Kelvin)
+L = (m / M) * R * T * log(p_1 / p_2)
+print(f"{L:.3e}")
+
+#lesson 50
+import pint
+ur = pint.UnitRegistry()
+G = 6.67430e-11 * (ur.meter**3 / (ur.kilogram * ur.second**2))
+m_sun = (1.989 * 10**30 * ur.kilogram)
+r_earth = (1.496 * 10**11 * (ur.m))
+acc_sun = G * m_sun / r_earth**2
+f"{acc_sun:.3e}"
+
+#lesson 51
+from math import log10
+import pint
+ur = pint.UnitRegistry()
+Q_ = ur.Quantity
+Lo = Q_(110, ur.dB)
+ro = 1 * ur.cm
+r = 1 * ur.m
+L = Lo - Q_(20 * log10(r / ro), ur.dB)
+print(L)
+
+#lesson 53
+from sympy import init_session
+init_session()
+g, v, t = symbols('g v t')
+expr = (-(1/2) * g * t**2 + v * t + y).subs({g:9.8, v:0, y:264.6})
+pprint(expr)
+ans = solve(expr, t); print(ans)
+pprint(nsimplify(ans[1]))
+v = (g * t).subs({g:9.8, t:3*6**(1/2)}); print(v)
+
+#lesson 54
+from numpy import rad2deg, deg2rad, sin, cos, arccos
+from pint import UnitRegistry
+ur = UnitRegistry()
+LAT_calypso = (39 * ur.arcdeg) + (51 * ur.arcmin)
+LON_calypso = (19 * ur.arcdeg) + (24 * ur.arcmin)
+LAT_ithaca = (38 * ur.arcdeg) + (22 * ur.arcmin)
+LON_ithaca = (20 * ur.arcdeg) + (43 * ur.arcmin)
+LAT_calypso, LON_calypso = deg2rad(LAT_calypso),\
+                           deg2rad(LON_calypso)
+LAT_ithaca, LON_ithaca = deg2rad(LAT_ithaca),\
+                         deg2rad(LON_ithaca)
+distance = rad2deg(arccos((sin(LAT_calypso) * sin(LAT_ithaca))\
+                       +  (cos(LAT_calypso) * cos(LAT_ithaca)\
+                       *   cos(LON_ithaca - LON_calypso)))) \
+                       *  (60 * ur.nautical_mile / ur.arcdeg)
+sigFigs, numDigInt = 4, 3
+round(distance, (sigFigs - numDigInt))
+
+#lesson 55
+%matplotlib inline
+import pandas as pd
+pd.set_options('display.max_columns', None)
+df = pd.read_csv('datafile/camp_mabry.csv', \
+                 parse_dates=True, index_col='DATE')
+camp_mabry_daily_temps = df[['TMAX', 'TMIN']].copy(deep=True)
+camp_mabry_daily_temps.agg(['min', 'max', 'mean', 'std'])
+camp_mabry_daily_temps['TMAX'].idxmax()
+camp_mabry_daily_temps['TMAX'].idxmin()
+camp_mabry_daily_temps['TMIN'].idxmax()
+camp_mabry_daily_temps['TMIN'].idxmin()
+camp_mabry_daily_temps.plot(figsize=(30, 3))
+
+#lesson 56
+from sympy import symbols, sin, cos, pi
+from sympy.plotting import plot
+t = symbols('t')
+signal = sin(2 * pi * (4 * t / 5)) \
+       + sin(2 * pi * 3 * t) * (1 / 2) \
+       + cos(2 * pi * t)
+plot(signal, (t, 0, pi))
+
