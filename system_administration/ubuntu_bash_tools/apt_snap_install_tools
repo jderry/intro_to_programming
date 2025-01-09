@@ -1,2 +1,2 @@
-sudo apt install gawk vim tree hwloc glimpse shellcheck bleachbit tre-agrep
+sudo apt install gawk vim tree hwloc glimpse shellcheck bleachbit tre-agrep build-essential
 sudo snap install --classic tmux
