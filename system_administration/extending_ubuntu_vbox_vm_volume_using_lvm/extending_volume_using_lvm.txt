@@ -1,0 +1,10 @@
+# given: vbox ubuntu vm built with lvm disk feature
+# given: new drive created for vbox ubuntu vm
+
+df -h
+lsblk
+sudo vgs
+sudo vgextend ubuntu-vg /dev/sdX # sdX is available drive
+sudo lvextend -l +100%FREE /dev/ubuntu-vg/ubuntu-lv
+sudo resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
+df -h
