@@ -1,2 +1,3 @@
-sudo apt install gawk vim tree hwloc glimpse shellcheck bleachbit tre-agrep build-essential
+sudo apt install gawk vim tree hwloc glimpse shellcheck bleachbit tre-agrep build-essential gpm
 sudo snap install --classic tmux
+sudo gpm -p # terminal mouse emulator, -p --- show pointer while selecting
