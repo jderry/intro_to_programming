@@ -2,7 +2,6 @@
 
 # initialization
 DICT=/usr/share/dict/american-english
-MYDICT=~/my_dict
 
 # test if personal dictionary exists
 # if not, create it
