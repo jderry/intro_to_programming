@@ -9,7 +9,7 @@ MYDICT=~/my_dict
 if [ -e ~/my_dict ]; then
  MYDICT=~/my_dict
 else
- touch ~/my_dict
+ touch ~/my_dict # create an empty file
  MYDICT=~/my_dict
 fi 
 
