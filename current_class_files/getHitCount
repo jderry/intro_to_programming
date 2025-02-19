@@ -1,0 +1,9 @@
+#!/bin/bash
+
+WEBLOG=$1
+
+gawk '{print $1}' $WEBLOG |# extract column one from each record in the log file
+sort |# collect identical ip addresses in contiguous blocks for counting
+uniq -c |# return single instance of each ip addr with count
+sort -nr |# sort count numerically in reverse order
+head # return first 10 lines (top 10 web browser)
