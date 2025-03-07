@@ -1,0 +1,20 @@
+ 5/1: # type coercion: force one datatype or collection into another datatype or collection
+ 5/2: bool(1)
+ 5/3: bool(-1)
+ 5/4: bool(0)
+ 5/5: bool([1, 2, 3])
+ 5/6: bool([])
+ 5/7: bool('hello')
+ 5/8: bool('')
+ 5/9: range(3)
+5/10: list(range(3))
+5/11: enumerate('string')
+5/12: list(enumerate('string'))
+5/13: range(3)
+5/14: %load_ext autoreload
+5/15: autoreload 2
+5/16: import get_percent_gc_content as gc
+5/17: gc.get_percent_gc_content('gattacagattaca')
+ 6/1: import get_percent_gc_content as gc
+ 6/2: gc.get_percent_gc_content?
+
