@@ -1,0 +1,12 @@
+  257  python unittest_get_percent_gc_content.py 
+  258  vim get_percent_gc_content.py 
+  259  python unittest_get_percent_gc_content.py 
+  260  vim get_percent_gc_content.py 
+  261  pylint get_percent_gc_content.py 
+  262  vim get_percent_gc_content.py 
+  263  pylint get_percent_gc_content.py 
+  264  sed 's/nuclStr/nucl_str/g' get_percent_gc_content.py 
+  265  sed -i 's/nuclStr/nucl_str/g' get_percent_gc_content.py 
+  266  pylint get_percent_gc_content.py 
+  267  python
+
