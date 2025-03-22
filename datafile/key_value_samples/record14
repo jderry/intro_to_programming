@@ -1,0 +1,109 @@
+Setup title	"IDVD p-type PDPP2T-TT-OD"
+Classic test name	"I/V Sweep"
+Test date	11/3/2018
+Test time	21:06:27
+Device ID	"CMM III.50 dpp-dtt s1 control 300K 11_3_18 dev1 Vg0,-50 Vd0,-50"
+Count	1
+Flags	
+Remarks	
+Context.MainFrame	4155C
+Channel.UnitType	SMU	SMU	SMU
+Channel.Unit	SMU1:MP	SMU2:MP	SMU3:MP
+Channel.IName	Id	Is	Ig
+Channel.VName	Vd	Vs	Vg
+Channel.Mode	V	V	V
+Channel.Func	VAR1	CONST	VAR2
+Channel.Index	
+Channel.Time	
+Measurement.Port.Unit	SMU1:MP	SMU2:MP	SMU3:MP
+Measurement.Port.SeriesResistor	NONE	NONE	NONE
+Measurement.Port.Filter	ON	ON	ON
+Measurement.Primary.Locus	Double
+Measurement.Primary.Scale	LINEAR
+Measurement.Primary.Start	0
+Measurement.Primary.Stop	-50
+Measurement.Primary.Step	-0.5
+Measurement.Primary.Compliance	0.0001
+Measurement.Primary.PowerCompliance	0
+Measurement.Aborting.Condition	"CONTINUE AT ANY"
+Measurement.PostOutput.Value	START
+Measurement.PostOutput.Retention	OFF
+Measurement.Secondary.Start	0
+Measurement.Secondary.Count	6
+Measurement.Secondary.Step	-10
+Measurement.Secondary.Compliance	0.0001
+Measurement.Secondary.PowerCompliance	0
+Measurement.Bias.Source	0	0	0
+Measurement.Bias.Compliance	0.0001	0.0001	0.0001
+Measurement.Monitor.Unit	SMU1:MP	SMU2:MP	SMU3:MP
+Measurement.Monitor.Adc	"HR ADC"	"HR ADC"	"HR ADC"
+Measurement.Monitor.RangingMode	LIMITED	LIMITED	LIMITED
+Measurement.Monitor.RangeBoundary	1nA	1nA	1nA
+Measurement.Monitor.RangeRating	"BY FULL RANGE"	"BY FULL RANGE"	"BY FULL RANGE"
+Measurement.Monitor.RangeRatingCoeff	50	50	50
+Measurement.Timing.Hold	0
+Measurement.Timing.Delay	0
+Measurement.Adc.HighResolution.AutoZero	OFF
+Measurement.Adc.HighResolution.Mode	AUTO
+Measurement.Adc.HighResolution.Coeff	1
+Measurement.Ag16440ASelector.SemiconductorRelay.Channel1	DEFAULT
+Measurement.Ag16440ASelector.SemiconductorRelay.Channel3	DEFAULT
+Output.Graph.Enabled	true
+Output.Graph.XAxis.Data	Vd
+Output.Graph.XAxis.Scale	Linear
+Output.Graph.XAxis.Left	-1
+Output.Graph.XAxis.Right	0
+Output.Graph.YAxis.Data	Id	Ig
+Output.Graph.YAxis.Scale	Linear	Linear
+Output.Graph.YAxis.Bottom	-1E-05	-1E-05
+Output.Graph.YAxis.Top	1E-05	1E-05
+Output.Graph.YAxis.Group		
+AutoAnalysis.Interpolation	false
+AutoAnalysis.Line1.Enabled	false
+AutoAnalysis.Line1.Type	1
+AutoAnalysis.Line1.Fix	True
+AutoAnalysis.Line1.YAxis	0
+AutoAnalysis.Line1.Point1.Type	0
+AutoAnalysis.Line1.Point1.XY.X	
+AutoAnalysis.Line1.Point1.XY.Y	
+AutoAnalysis.Line1.Point1.Data.Var	
+AutoAnalysis.Line1.Point1.Data.Condition	
+AutoAnalysis.Line1.Point1.Data.Start	false
+AutoAnalysis.Line1.Point1.Data.StartVar	
+AutoAnalysis.Line1.Point1.Data.StartCondition	
+AutoAnalysis.Line1.Point2.Type	0
+AutoAnalysis.Line1.Point2.XY.X	
+AutoAnalysis.Line1.Point2.XY.Y	
+AutoAnalysis.Line1.Point2.Data.Var	
+AutoAnalysis.Line1.Point2.Data.Condition	
+AutoAnalysis.Line1.Point2.Data.Start	false
+AutoAnalysis.Line1.Point2.Data.StartVar	
+AutoAnalysis.Line1.Point2.Data.StartCondition	
+AutoAnalysis.Line1.GradientExpr	0
+AutoAnalysis.Line2.Enabled	false
+AutoAnalysis.Line2.Type	1
+AutoAnalysis.Line2.Fix	True
+AutoAnalysis.Line2.YAxis	0
+AutoAnalysis.Line2.Point1.Type	0
+AutoAnalysis.Line2.Point1.XY.X	
+AutoAnalysis.Line2.Point1.XY.Y	
+AutoAnalysis.Line2.Point1.Data.Var	
+AutoAnalysis.Line2.Point1.Data.Condition	
+AutoAnalysis.Line2.Point1.Data.Start	false
+AutoAnalysis.Line2.Point1.Data.StartVar	
+AutoAnalysis.Line2.Point1.Data.StartCondition	
+AutoAnalysis.Line2.Point2.Type	0
+AutoAnalysis.Line2.Point2.XY.X	
+AutoAnalysis.Line2.Point2.XY.Y	
+AutoAnalysis.Line2.Point2.Data.Var	
+AutoAnalysis.Line2.Point2.Data.Condition	
+AutoAnalysis.Line2.Point2.Data.Start	false
+AutoAnalysis.Line2.Point2.Data.StartVar	
+AutoAnalysis.Line2.Point2.Data.StartCondition	
+AutoAnalysis.Line2.GradientExpr	0
+AutoAnalysis.Marker.Enabled	false
+AutoAnalysis.Marker.Data.Var	
+AutoAnalysis.Marker.Data.Condition	
+AutoAnalysis.Marker.Data.Start	false
+AutoAnalysis.Marker.Data.StartVar	
+AutoAnalysis.Marker.Data.StartCondition	
