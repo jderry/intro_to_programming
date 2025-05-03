@@ -1,9 +1,9 @@
-#lesson 43
+# Datetime I: Duration of The Covid Pandemic
 from datetime import date
 date1, date2= date(2020, 3, 11), date(2023, 5, 11)
 (date2 - date1).days
 
-#lesson 44
+# Datetime II: Solving Date Problems
 from datetime import date
 date1, today = date(2007, 3, 29), date.today()
 print((today - date1).days)
@@ -13,12 +13,12 @@ bro_birthdate = date(2010, 6, 10)
 difference = bro_birthdate - date1
 date1 + (2 * difference)
 
-#lesson 45
+# Heat Loss
 from numpy import array
 h, A, T = .47, 30, array([15, 22, 65, 38, 27, 45])
 q = h * A * T; print(q)
 
-#lesson46
+# Find the GC-content percentage of a nucleotide string
 nuclStr = 'gattacagattaca'
 nuclStr = nuclStr.lower()
 gc_content_per = 100 * ((nuclStr.count('g') \
@@ -26,16 +26,16 @@ gc_content_per = 100 * ((nuclStr.count('g') \
                        / len(nuclStr))
 print(f"{gc_content_per:4.2f}%")
 
-#lesson47
+# Stoichiometry With SymPy
 from sympy import *
 x1, x2, x3 = symbols('x1 x2 x3')
 A, b, x = Matrix([4, 0, -1, 0, 2, -5, 0, 0, 1]).reshape(3, 3),\
                 (0, 0, 1), (x1, x2, x3)
 from sympy.solvers.solveset import linsolve
 system = A, b
-(ans) = linsolve(system, x); print(ans)
+[ans] = linsolve(system, x); print(ans)
 
-#lesson 48
+# Ideal Gas Law
 import pint
 ur = pint.UnitRegistry()
 Q_ = ur.Quantity
@@ -52,7 +52,7 @@ g_He.magnitude
 g_He.units
 print(g_He.dimensionality)
 
-#lesson 49
+# Work Performed By Expanding Gas
 from math import log
 import pint
 ureg = pint.UnitRegistry()
@@ -67,7 +67,7 @@ R = 8.314 * 10**7 * ureg.erg\
 L = (m / M) * R * T * log(p_1 / p_2)
 print(f"{L:.3e}")
 
-#lesson 50
+# Acceleration of Sun on Earth
 import pint
 ur = pint.UnitRegistry()
 G = 6.67430e-11 * (ur.meter**3 / (ur.kilogram * ur.second**2))
@@ -76,7 +76,7 @@ r_earth = (1.496 * 10**11 * (ur.m))
 acc_sun = G * m_sun / r_earth**2
 f"{acc_sun:.3e}"
 
-#lesson 51
+# Sound Level
 from math import log10
 import pint
 ur = pint.UnitRegistry()
@@ -87,7 +87,7 @@ r = 1 * ur.m
 L = Lo - Q_(20 * log10(r / ro), ur.dB)
 print(L)
 
-#lesson 53
+# Falling Bodies
 from sympy import init_session
 init_session()
 g, v, t = symbols('g v t')
@@ -97,7 +97,7 @@ ans = solve(expr, t); print(ans)
 pprint(nsimplify(ans[1]))
 v = (g * t).subs({g:9.8, t:3*6**(1/2)}); print(v)
 
-#lesson 54
+# Spherical Trigonometry in Navigation
 from numpy import rad2deg, deg2rad, sin, cos, arccos
 from pint import UnitRegistry
 ur = UnitRegistry()
@@ -116,7 +116,7 @@ distance = rad2deg(arccos((sin(LAT_calypso) * sin(LAT_ithaca))\
 sigFigs, numDigInt = 4, 3
 round(distance, (sigFigs - numDigInt))
 
-#lesson 55
+# Climate Data
 %matplotlib inline
 import pandas as pd
 pd.set_options('display.max_columns', None)
@@ -130,7 +130,7 @@ camp_mabry_daily_temps['TMIN'].idxmax()
 camp_mabry_daily_temps['TMIN'].idxmin()
 camp_mabry_daily_temps.plot(figsize=(30, 3))
 
-#lesson 56
+# Digital Signals
 from sympy import symbols, sin, cos, pi
 from sympy.plotting import plot
 t = symbols('t')

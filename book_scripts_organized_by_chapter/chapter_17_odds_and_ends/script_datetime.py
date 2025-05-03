@@ -2,13 +2,13 @@ import pandas as pd
 import datetime as dt
 import os
 
-home_dir = os.path.expanduser('~')
+home = os.path.expanduser('~')
 
 # first, use powershell to change character encoding of file to utf8 so that python can read it.
 #PS C:\Users\cns-jderry> powershell -Command "Get-Content python\daily.txt 
 #     -Encoding Unicode | Set-Content -Encoding UTF8 python\daily_utf8.txt"
 #
-df = pd.read_csv(home_dir + '/datafile/datetime_input.csv', sep=',', encoding='utf-8')
+df = pd.read_csv(home + '/datafile/datetime_input.csv', sep=',', encoding='utf-8')
 
 # convert datetime strings in datetime to datetime objects
 # sort df: order first by subject, then by datetime
@@ -86,4 +86,4 @@ for row in range(len(df)-1):
                 newDF_row += 1
         entry_cnt = 1 # reset to 1
 
-newDF.to_csv(home_dir + '/datafile/datetime_output.csv', sep='\t', index=False) 
+newDF.to_csv(home + '/datafile/datetime_output.csv', sep='\t', index=False) 

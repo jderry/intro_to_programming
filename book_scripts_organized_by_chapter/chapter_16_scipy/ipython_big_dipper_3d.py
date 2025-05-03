@@ -2,16 +2,16 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import os
 
-home_dir = home_dir = os.path.expanduser('~')
+home = os.path.expanduser('~')
 
 # we need the starTable's label line
-starTable = pd.read_csv(home_dir + '/datafile/hygdata_v41.zip',\
+starTable = pd.read_csv(home + '/datafile/hygdata_v41.zip',\
                         sep=',',\
                         compression='zip')
 label_line = starTable.columns.tolist()
 
 # now we label the columns in the big dipper dataframe
-big_dipper = pd.read_csv(home_dir + '/datafile/big_dipper.txt',\
+big_dipper = pd.read_csv(home + '/datafile/big_dipper.txt',\
                          index_col=0,\
                          names=label_line)
 
