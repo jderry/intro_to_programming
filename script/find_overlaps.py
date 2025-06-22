@@ -1,14 +1,17 @@
-with open('datafile/finding_interval_overlaps/exon.bed', 'r') as exonFile,\:
-with open('datafile/finding_interval_overlaps/test.sort.bed', 'r') as testFile:
+import os
+home = os.path.expanduser('~')
+
+with open(home + '/datafile/finding_interval_overlaps/exon.bed', 'r') as exonFile,\
+     open(home + '/datafile/finding_interval_overlaps/test.sort.bed', 'r') as testFile:
     exonLoS, testLoS = exonFile.read().splitlines(),\
                        testFile.read().splitlines()
     exonLoL, testLoL = [], []
     for exonRec in exonLoS:
         exonLoL.append(exonRec.split('\t'))
     for testRec in testLoS:
-        LoL.append(testRec.split())
+        testLoL.append(testRec.split('\t'))
 
-with open('overlaps', 'w') as outFile:
+with open(home + '/datafile/overlaps', 'w') as outFile:
     for testRec in testLoL:
         for exonRec in exonLoL:
             if testRec[0] == exonRec[0]\
