@@ -1,5 +1,0 @@
-# replace MS-DOS carriage-return linefeeds with newline chars
-tr -s '\r' '\n' < datetime_windows_unicode_crlf_dataset.txt > ~/datafile/FIXED_datetime_file
-
-# how many named stars are in the star catalog?
-zcat datafile/hygdata_v41.zip | tail -n +2 | sed -e 's/""//g' | gawk -F',' '$7{print $7}' | wc -l
