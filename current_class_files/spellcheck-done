@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# initialization
+DICT=/usr/share/dict/american-english
+
+# implementation of pipeline
+# echo "At Bell Laborotories, UNIX systems privide more timesharing ports than all other systems combined" |# echo in string literal for development
+tr -d '[:punct:]' |# delete all punctuation
+tr -s ' ' '\n' |# replace all spaces with newline characters
+tr '[:upper:]' '[:lower:]' |# replace all uppercase chars with lowercase equival.
+sort |# dictionary sort the words
+uniq |# returns a single instance of identical words
+grep -E -xvf $DICT
