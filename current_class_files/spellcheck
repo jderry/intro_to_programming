@@ -1,0 +1,2 @@
+DICT=/usr/share/dict/american-english
+echo "At Bell Laborotories, UNIX systems privide more timesharing ports than all other systems combined" | tr -d '[:punct:]' | tr -s ' ' '\n' | tr '[:upper:]' '[:lower:]' | sort | uniq | grep -E -xvf $DICT
