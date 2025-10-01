@@ -1,0 +1,12 @@
+##### reverse complement
+complDict = {'a':'t', 'c':'g', 'g':'c', 't':'a'}
+nuclStr, outputStr = 'gattaca', ''
+for nucleotide in nuclStr:
+    outputStr = complDict[nucleotide] + outputStr
+print(outputStr)
+##### euclidGCD
+natA, natB = 53667, 25527
+while natB:
+    natA, natB = natB, natA % natB
+print(natA)
+
