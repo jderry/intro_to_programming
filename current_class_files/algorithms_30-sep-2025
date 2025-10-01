@@ -1,12 +1,19 @@
 ##### reverse complement
+# initialization: create and instantiate variables
 complDict = {'a':'t', 'c':'g', 'g':'c', 't':'a'}
-nuclStr, outputStr = 'gattaca', ''
+nuclStr, outputStr = 'gattaca', '' # nuclStr is input
+
+# implementation
 for nucleotide in nuclStr:
     outputStr = complDict[nucleotide] + outputStr
-print(outputStr)
+print(outputStr) # output
+
 ##### euclidGCD
-natA, natB = 53667, 25527
+# initialization: create and instantiate variables
+natA, natB = 53667, 25527 # input
+
+# implementation
 while natB:
     natA, natB = natB, natA % natB
-print(natA)
+print(natA) # output
 
