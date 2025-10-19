@@ -1,0 +1,49 @@
+14/1: testList = [ 14, 3, 2]
+14/2: testList[1]
+14/3: testList[1+1] # we can do simple arithmetic with indices
+14/4: testList[2+1]
+14/5:
+with open('/home/james/datafile/hewitsoni_males.txt', 'r') as in_file:
+    LoS = in_file.read().splitlines()
+
+14/8: # here i introduced ctrl-q ctrl-j to insert a new line in multi-line input
+      # in ipython
+LoL = []
+for record in LoS:
+    LoL.append(record.split())
+14/9: LoL[:5] # slicing the list. a slice takes two indices,
+              # and the indices are separated by a full colon.
+              # no written index means use the default value;
+              # in this case, use the default start of the list.
+              # this slice shows the first 5 items of the list LoL
+14/10: LoL.pop(0) # first item is the dataset's label line
+                  # we can remove it by popping it off the list
+14/11: LoL[:5]
+14/12: LoL[:15]   # showing the first 15 records in the LoL,
+                  # we devise a hand algorithm that we could use
+                  # to create an edge list from the data in these records.
+                  # we will implement the algorithm in python, and have our machines
+                  # do the work.
+15/1: range(5)    # this is 'range' as in 'range of the number line'.
+                  # the resulting range object is ordered and contains the first 5 natural numbers
+15/2: list(range(5)) # we can verify that by coercing the range object into a list,
+                     # and inspecting the items in the list
+                     # we will use range(len(LoL)) to create a range object whose items match
+                     # the record indices of LoL. this allows us to iterate through LoL using
+                     # and referring to the record indices of LoL.
+
+14/14:
+with open('edge_list', 'w') as out_file:
+    for index in range(len(LoL)-1): # we stop stepping through the records in LoL at the penultimate record
+        if LoL[index][0] == LoL[index+1][0]:
+            out_file.write(f"{LoL[index][1]}\t{LoL[index+1][1]}\t{LoL[index][0]}\n")
+14/15:
+%%timeit # profiling multi-statement input in ipython
+         # to profile one's code means finding out how fast it runs on a machine
+with open('edge_list', 'w') as out_file:
+    for index in range(len(LoL)-1):
+        if LoL[index][0] == LoL[index+1][0]:
+            out_file.write(f"{LoL[index][1]}\t{LoL[index+1][1]}\t{LoL[index][0]}\n")
+14/16: !ls
+14/17: !head edge_list
+
