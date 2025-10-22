@@ -1,0 +1,98 @@
+# global variables can be invoked within a function
+17/1: complDict = {'a':'t', 'c':'g', 'g':'c', 't':'a'}
+
+17/2:
+def get_compl_d(nucleotide: str) -> str:
+    # implementation of algorithm
+    return complDict[nucleotide]
+17/3: get_compl_d('a')
+
+17/6:
+def get_compl_if(nucleotide: str) -> str:
+    # implementation of algorithm
+    if nucleotide == 'a':
+        complement = 't'
+    elif nucleotide == 'c':
+        complement = 'g'
+    elif nucleotide == 'g':
+        complement = 'c'
+    else:
+        complement = 'a'
+    return complement
+17/7: get_compl_if('a')
+
+# the two functions written above use different algorithms,
+# but they are functionally equivalent.
+
+# all things being equal, if we have two algorithms that are functionally equivalent,
+# we should in most cases prefer the faster
+
+17/12: %timeit get_compl_if('a')
+17/13: %timeit get_compl_if('c')
+17/14: %timeit get_compl_if('g')
+17/15: %timeit get_compl_if('t')
+# note that the further down the if-elif-else branch we have to go,
+# the greater the latency. simplifying things, assuming that for an
+# arbitrary nucleotide string, each nucleotide occurs in 25% of the string,
+# the average run time would be (timeit a + timeit c + timeit g + timeit t) / 4
+
+17/16:
+def test_f(a, b):
+    return b, a
+# creating a function with 2 positional arguments
+
+17/17: test_f(5, 6)
+
+17/23:
+def test_f(cm=None, g=None):
+    return g, cm
+# modifying the function to use named arguments
+# named arguments require default values be assigned
+# to them in the argument list.
+# if a named argument has no default value, use None
+
+17/24: test_f(5, 6)
+17/25: test_f()
+17/26: test_f(g=7, cm=5)
+
+
+17/27:
+def test_f(arg1, cm=None, g=None):
+    return g, cm, arg1
+# here, we add a positional argument
+# if a function requires an argument and all other arguments
+# are optional, the required argument is often positional
+# and is first in the argument list. the named arguments follow
+# in descending order of importance or likelihood that the argument
+# will be modified by user
+
+# the order of arguments in the argument list is important,
+# and should take into account how most users will use the function.
+# for example, if you write a function that will take as input values
+# that a lab worker will collect on specimens by following a protocol
+# (in which the order of the values recorded is specified),
+# it makes sense to order the arguments in the order that the protocol specifies.
+# this makes it easier for lab workers to use your argument even as they're
+# collecting the data.
+
+17/28: test_f(10)
+# at a minimum, the positional argument must be passed into the function
+17/29: test_f(10, 6)
+17/30: test_f(10, 6, 8) 
+# you can enter named arguments as they are ordered in the argument list
+# as positional arguments
+
+17/31: test_f(10, g=3) # allowed
+# once you start listing named arguments in keyword=value pairs,
+# you must do the same for all arguments that follow.
+17/32: test_f(10, g=3, 1) # this is an illegal argument list
+# you can't go from positional arguments to named arguments,
+# then back to positional arguments
+# however, once you start listing named arguments, you can list them
+# in any order you want
+
+17/33: from matplotlib.pyplot import hist
+hist?
+# studying the argument list of a function in matplotlib
+# correction on statement made in lecture on the hist function:
+# the first argument IS a positional argument.
