@@ -1,0 +1,82 @@
+19/1: # lambda: an anonymous function, meant to be used once in code execution
+19/2: # symbol table: holds the names of the variables and functions
+19/3: # for n in range(10): the interpreter has its own private symbol tables,
+      # which it doesn't share, or 'expose', to us. hence, we call variables
+      # and functions tracked in these symbol tables 'anonymous'
+19/4: lambda x, y: x + y # lambdas are anonymous functions
+      # they are meant to be used only once then 'forgotten'
+      # they're great when used in this context because if they ARE meant
+      # to be used just once, they don't persist, taking up space (memory)
+19/5: (lambda x, y: x + y)(5, 7) # we can write and run lambdas on the command line
+      # though if the function is important to be used over and over in a session,
+      # you are better off writing it as a named function (using the keyword 'def');
+      # and if it's important to be used over multiple sessions, it should be written
+      # into a module.
+      
+19/6: from scipy.integrate import quad # we will use a function in scipy that returns
+      # the numerical value of definite integrals, to compare with the values we get
+      # from our algorithm
+19/7: import scipy
+19/8: scipy.integrate? # scipy.integrate offers several algorithms for calculating integrals
+
+19/10: from scipy.differentiate import derivative # we'll do the same for numerical derivatives
+      # we calculate from our algorithm --- that is, compare the returned value to our own
+
+# our algorithm for calculating an approximation of definite integrals uses riemann sums
+# warning: it is a memory hog! i believe you may need 16gb of ram for your vm
+# for this algorithm to run to completion
+19/11: from numpy import linspace, sum as s
+
+20/3:
+from numpy import linspace, sum as s
+def get_num_integral(f, end_x, start_x = 0, delta_x = 1e-8):
+    x = linspace(start_x, end_x, int((end_x - start_x) / delta_x))
+    return s(f(x) * delta_x)
+    
+20/6: get_num_integral(lambda x: x, 5)
+
+# here we discussed why travis oliphant invented numpy
+# and the collection called 'ndarray'
+# 'numpy' means 'numerical python'; and by default
+# the ndarray is designed to hold only floats
+# however, you can define the datatype or collection
+# of all items in an ndarray that you create.
+# later, we will bring a dataset of heterogenous items
+# into an ndarray by defining all items as strings,
+# which all data in a datafile is.
+# only after the entire dataset is read into an ndarray,
+# do we extract the columns we want to work with into a submatrix
+# (a smaller ndarray), converting the values in the columns into floats
+# as we do.
+
+# in any case, all datatypes and collection in python are objects,
+# and if we want to set the datatype for items in an ndarray to 'object',
+# i believe we should be able to; however, that defies the justification for using
+# ndarrays so not recommended (but you might come up with a justification for doing
+# so that the teacher isn't aware of!)
+20/9: isinstance(5, object)
+20/10: isinstance('5', object)
+20/11: isinstance(int('5'), object)
+20/12: isinstance(int('5'), int)
+20/13: # preprocess
+# preprocessing your dataset to get it into shape for running the analysis or
+# transformation that is your goal is actually quite common when working especially
+# with raw data. if the preprocessing is cleaning your data, it's called 'data wrangling'.
+# some students have learned python just so they can preprocess their data before
+# feeding it into commercial software or into another language session (i'm thinking of R).
+# in these cases, their scripts become part of their labs' pipelines.
+
+20/14: quad(lambda x: x, 0, 5)
+20/15: get_num_integral(lambda x: x**2, 5)
+20/16: quad(lambda x: x**2, 0, 5)
+20/17: quad?
+
+# our numerical derivative function.
+20/18:
+def get_num_der(f, x, h = 1e-11):
+    return (f(x + h) - f(x)) / h
+20/19: get_num_der(lambda x: x, 5)
+20/20: derivative(lambda x: x, 5)
+20/21: derivative(lambda x: x**2, 5)
+20/22: get_num_der(lambda x: x**2, 5)
+
