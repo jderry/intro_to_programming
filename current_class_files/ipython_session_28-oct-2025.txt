@@ -1,0 +1,67 @@
+# we finished our intro to the analysis of algorithms (14.1 The Analysis of Algorithms)
+# and saw by example that searching for a value in an unsorted array
+# runs in linear time O(n)
+
+# we spent time looking at the python half-open interval, 
+# as well as at the range function and range objects
+# (15.4 The Python Half-Open Interval, Range Objects, and Slicing)
+# during the lecture, i got a little confused: 
+# open interval includes the endpoints, and is enclosed by square brackets;
+# closed interval excludes the endpoints, and is enclosed by parentheses.
+# the python half-open interval includes the small endpoint and excludes the large endpoint
+22/1: input_seq = range(10)
+22/2: list(input_seq)
+22/3: input_seq
+22/4: range(5) # contains the first 5 natural numbers, including zero, in order
+22/5: list(range(5))
+
+22/6: range? # accessing the built-in documentation
+22/7: list(range(1,10)) # small endpoint: 1, big endpoint: 10 (python half-open interval: 1 included, 10 excluded)
+22/8: list(range(1,10,2)) # the range function can take up to 3 ints as arguments. the 3d is called the 'step'.
+22/9: list(range(1,10,3))
+22/10: list(range(10,1))
+22/11: range(0, 10, -1)
+22/12: list(range(0, 10, -1))
+22/13: 'happy'[::-1] # python slices also use the python half-open interval.
+                     # this slice returns a reverse of the string literal 'happy'
+22/14: list(range(10, 0, -1))
+22/15: %whos
+22/16: [ e**2 for e in input_seq] # a list comprehension (15.9 Comprehension)
+
+22/18: [ e**2 for e in input_seq if e % 2 == 0]
+22/19: [ e**2 for e in input_seq if e % 2 != 0]
+22/20: [ e**2 for e in input_seq if e % 2 == 1]
+
+# the sieve of eratosthenes, done as two list comprehensions
+22/21: not_primes = [j for i in range(2, 11) for j in range(i*2, 101, i)]
+22/22: not_primes
+22/23: primes = [x for x in range(2, 101) if x not in not_primes]
+22/24: primes
+22/25: %hist
+22/26: %rerun 1 # rerun the first statement of the current session
+
+22/27: zip?
+22/28: men, dogs = ['alan', 'bob', 'carl'], ['bella', 'trixie', 'rex']
+
+22/29: # we anticipate that this for-loop won't run, and it doesn't
+for man, dog in men, dogs:
+    print(f'{man} bites {dog}')
+22/30: # zipping the two lists together puts their elements pairwise
+       # into the tuples of a zip object, making them accessible
+for man, dog in zip(men, dogs):
+    print(f'{man} bites {dog}')
+    
+22/31: list(zip(men, dogs)) # coercing a zip object into a list
+                            # so we can inspect its items, which are tuples
+
+# we briefly talked about how, if we conceive of a tabular dataset as a matrix,
+# we can bring the tools of linear algebra to bear on working on the dataset
+# on doing data analysis on the dimensions of the dataset
+# in lecture, i called 'vectors' 'arrays'. while this is not incorrect,
+# i prefer to use 'vector' when talking about row vectors and column vectors.
+22/32: !ls /home/james/repo/intro_to_programming/datafile/
+22/33: !unzip /home/james/repo/intro_to_programming/datafile/RSEM.iso_res.zip -d /home/james/datafile/
+22/34: !wc datafile/RSEM.iso_res
+22/35: !factor 3969896
+# my laptop battery ran out before we could transpose the RSEM.iso_res with 3 different algorithms
+# and profile each algorithm. we'll pick up next class there.
