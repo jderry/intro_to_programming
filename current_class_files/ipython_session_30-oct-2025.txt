@@ -1,0 +1,58 @@
+# in class i got confused when generating the transpose of the LoL using the zip() function.
+# the method does work and comes from the python.org site: 
+# https://docs.python.org/3/whatsnew/2.4.html
+# i believe i should have used a smaller test matrix as an example first.
+
+24/1: !ls /home/james/datafile/
+24/2:
+with open('/home/james/datafile/RSEM.iso_res') as in_file:
+    LoS = in_file.read().splitlines()
+    LoL = []
+    for row in LoS:
+        LoL.append(row.split())
+24/3: len(LoL) # number of rows
+24/4: len(LoL[0]) # number of columns
+24/5: transpose = [[row[i] for row in LoL] for i in range(len(LoL[0]))]
+24/6: len(transpose)
+24/7: len(transpose[0])
+24/8: %timeit transpose = [[row[i] for row in LoL] for i in range(len(LoL[0]))]
+
+# demonstrating the unpacking operator *
+24/9: men, dogs = ['alan', 'bob', 'carl'], ['bella', 'trixie', 'rex']
+24/10: list(zip(men, dogs))
+
+
+24/11: transpose = list(zip(*LoL, strict=True))
+24/12: len(transpose)
+
+# using the .T method in numpy to transpose a matrix
+24/13: from numpy import array
+24/14: LoL = array(LoL)
+24/15: type(LoL)
+24/16: LoL.T
+24/17: %timeit transpose = LoL.T
+
+# introduction to sets
+# python sets are unordered & contain only a single instance of each item
+# the can be used to show existence and membership
+# they can be used for set operations (union, intersection)
+24/18: men
+24/19: set(men)
+24/20: test_set = set(men)
+24/21: test_set.add('donald')
+24/22: test_set
+24/23: test_set.add('alan') # this replaces the first instance of 'alan' in the set
+24/24: test_set
+# because they are unordered, sets can test membership when order of items is unimportant
+# (but completeness of the set is). an example of when this might be useful is testing for
+# attributes in the records of your recordset.
+24/25: from itertools import product
+24/26: product(['chicken', 'spaghetti', 'fish'], ['corn', 'salad'], ['pudding', 'jello'])
+24/27: list(product(['chicken', 'spaghetti', 'fish'], ['corn', 'salad'], ['pudding', 'jello']))
+24/28: ('fish', 'corn', 'jello') in product(['chicken', 'spaghetti', 'fish'], ['corn', 'salad'], ['pudding', 'jello'])
+24/29: ('salad', 'fish', 'jello') in product(['chicken', 'spaghetti', 'fish'], ['corn', 'salad'], ['pudding', 'jello'])
+24/30: [set(lunch) for lunch in product(['chicken', 'spaghetti', 'fish'], ['corn', 'salad'], ['pudding', 'jello'])]
+# both your test collection and collection of attributes must be sets.
+24/31: {'fish', 'salad', 'pudding'} in [set(lunch) for lunch in product(['chicken', 'spaghetti', 'fish'], ['corn', 'salad'], ['pudding', 'jello'])]
+24/32: {'salad', 'fish', 'pudding'} in [set(lunch) for lunch in product(['chicken', 'spaghetti', 'fish'], ['corn', 'salad'], ['pudding', 'jello'])]
+
