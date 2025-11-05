@@ -1,0 +1,38 @@
+# note that because a subroutine must exist in session memory before it can be invoked,
+# we first write the subroutines, then the main routine.
+# in this example, we develop and test our subroutines and main routine in ipython
+# before we write them into text files.
+
+# because of time restrictions (how many minutes we have in the classroom),
+# i have written only the python implementations and skipped the documentation
+# and garbage filters. in the real world, starting with the docstrings and garbage filters
+# may give you time to think through how you will implement the subroutines.
+# in fact, clearly articulating what you want your code to do before you write it
+# may help "clear the cobwebs" so you can clearly imagine the implementation
+# before you write it.
+
+26/1:
+from math import pi
+def calculate_surface_area(inches: float) -> float:
+    return 4 * pi * inches**2
+26/2:
+def compute_costs_by_color(area: float) -> dict:
+    return {'red': area * .03, 'blue': area * .05, 'green': area * .08}
+26/3:
+def print_num_balls_by_color(inches: float, dollars: float, cost_dict: dict):
+    print(f"\nThe number of {2 * inches:4.2f}-inch diameter balls "
+          f"you can buy with ${dollars:4.2f} dollar(s) by color is:")
+26/4:
+def print_num_balls_by_color(inches: float, dollars: float, cost_dict: dict):
+    print(f"\nThe number of {2 * inches:4.2f}-inch diameter balls "
+          f"you can buy with ${dollars:4.2f} dollar(s) by color is:")
+    for color, cost in cost_dict.items():
+        num_balls = int(dollars / cost)
+        print(f"{color:<6} {num_balls}")
+26/5:
+# from num_balls_sbr import calculate_surface_area, compute_costs_by_color, print_num_balls_by_color
+def num_balls(dollars: float, inches: float) -> int:
+    area = calculate_surface_area(inches)
+    cost_dict = compute_costs_by_color(area)
+    print_num_balls_by_color(inches, dollars, cost_dict)
+
