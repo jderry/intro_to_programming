@@ -10,7 +10,11 @@ For a reader using the book in independent study to gain a working knowledge of 
 After accessing a Linux machine, readers should either install git client or verify that it's installed, then clone this intro_to_programming repo into their home directories, preferably in a subdirectory named "repo".
 
 The folder "how_to_get_started" contains how-to guides on how to install an ubuntu virtual machine, and how to configure an ubuntu machine for class use, as well as for use in working through the book.
+
 The folder "system_administration" contains text files that serve as both how-to guides and scripts for setting up Linux machines. This includes installing apps invoked in Linux statements in the book.
+
 The folder "book_scripts_organized_by_chapter" contains the code found in the book, organized by chapter.
+
 The folder "datafile" contains the datafiles used in the class and the book.
+
 The folder "notebook" contains the Jupyter notebooks used in the class and the book.
