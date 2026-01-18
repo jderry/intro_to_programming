@@ -18,3 +18,5 @@ The folder "book_scripts_organized_by_chapter" contains the code found in the bo
 The folder "datafile" contains the datafiles used in the class and the book.
 
 The folder "notebook" contains the Jupyter notebooks used in the class and the book.
+
+If you have questions or comments about the contents of the book, please post them to: https://substack.com/@jamesrderry
