@@ -1,0 +1,7 @@
+creator: james derry
+sensor: PCsensor High Precision Type-c Portable Thermometer
+room temp: 25.21C
+air press: 988mbar
+mass: ~25ml water in 33ml test tube heated to boil
+notes: heated over flame to boil. test tube left standing to cool in test tube rack.
+
