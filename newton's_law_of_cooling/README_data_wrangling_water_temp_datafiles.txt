@@ -18,4 +18,4 @@ FILENAME=Guest.txt
 sed -i '/Date Time Temperature/c\Date Time Temp(C)' $FILENAME
 # 6) through sed, tell the machine that starting on line 11,
 # replace the last two chars at the end of every line with the empty string
-sed -i '11,$ s/..$//' $FILENAME
+sed -i '12,$ s/..$//' $FILENAME
