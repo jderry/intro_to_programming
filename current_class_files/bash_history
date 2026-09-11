@@ -1,0 +1,45 @@
+# bash session for 10 sep 2026
+# please note that bash history does not capture
+# keystrokes passed into applications like vim
+sudo apt update && sudo apt dist-upgrade
+sudo reboot
+sudo bash ~/repo/intro_to_programming/system_administration/ubuntu_bash_tools/apt_snap_install_tools
+sudo snap remove thunderbird
+sudo shutdown now
+echo $PATH
+# to make a script executable, you must do 3 things to it.
+# 1) put script into a directory whose absolute path is in the PATH string
+makeProjFS
+mkdir bin # users in linux can make and run executables in their home dirs
+ls -tr
+echo $PATH
+vim makeProjFS
+bash makeProjFS # we can execute a bash script by passing its path/name to bash
+ls -tr
+tree project/ # tree returns a leaf-and-stem representation of directories/files
+vim makeProjFS
+ls -tr
+rm -rf project/ # 'rm' is powerful juju. use with caution.
+ls -tr
+bash makeProjFS 
+tree project/
+vim makeProjFS
+bash makeProjFS
+tree project/
+vim makeProjFS
+ls -l makeProjFS 
+chmod 764 makeProjFS 
+# 2) set the execution bit on the script
+# 3) add a shebang line to the top of the script
+ls -tr
+./makeProjFS # this executes the script, even when it's not in a bin or sbin folder
+mv makeProjFS bin
+ls bin
+makeProjFS horse # testing the script
+tree project/
+echo $PATH
+echo $PATH | grep home # if a bin folder in our home dir, this highlights 'home' in its absolute path in the PATH string
+echo $HOME
+echo $USER
+history 
+sudo -i
