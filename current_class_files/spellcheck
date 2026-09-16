@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# initialization
+DICT=/usr/share/dict/american-english
+
+# echo "At Bell Laborotories, UNIX systems privide more timesharing ports than all other systems combined." |#
+tr -d [:punct:] |# delete punctuation
+sed 's/ /\n/g' |# replace spaces in input with newline chars
+tr '[:upper:]' '[:lower:]' |# replace uppercase chars with lowercase equivalents
+sort |# sort words so identical words are contiguous
+uniq |# return only a single instance of each word in input
+grep -xvf $DICT # -x compare whole lines, -v return complement, -f using file DICT

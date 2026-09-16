@@ -1,0 +1,42 @@
+# bash session for 15 sep 2026.
+shellcheck ~/bin/makeProjFS # bash linter
+sed 's|PROJPATH|"PROJPATH"|g' ~/bin/makeProjFS 
+sed 's|$PROJPATH|"$PROJPATH"|g' ~/bin/makeProjFS 
+sed -i 's|$PROJPATH|"$PROJPATH"|g' ~/bin/makeProjFS 
+cat ~/bin/makeProjFS 
+sed 's|$PROJ/|"$PROJ"/|g' ~/bin/makeProjFS 
+sed -i 's|$PROJ/|"$PROJ"/|g' ~/bin/makeProjFS 
+shellcheck ~/bin/makeProjFS 
+find /usr -name american-english
+find / -name american-english
+find / -name american-english 2>/dev/null # redirect warnings to the bit bucket
+DICT=/usr/share/dict/american-english 
+head $DICT
+STR="At Bell Laborotories, UNIX systems privide more timesharing ports than all other systems combined."
+echo $STR
+# [:alpha:]
+# we develop our pipelines one command at a time
+# a reusable pipeline can be made into an executable script
+echo $STR | tr -d [:punct:]
+echo $STR | tr -d [:punct:] | tr -s ' ' '\n'
+echo $STR | tr -d [:punct:] | sed 's/ /\n/g'
+echo $STR | tr -d [:punct:] | sed 's/ /\n/g' | tr '[:upper:]' '[:lower:]'
+echo $STR | tr -d [:punct:] | sed 's/ /\n/g' | tr '[:upper:]' '[:lower:]' | sort
+echo $STR | tr -d [:punct:] | sed 's/ /\n/g' | tr '[:upper:]' '[:lower:]' | sort | uniq
+echo $STR | tr -d [:punct:] | sed 's/ /\n/g' | tr '[:upper:]' '[:lower:]' | sort | uniq | grep -xvf $DICT
+vim spellcheck
+echo "echo $STR | tr -d [:punct:] | sed 's/ /\n/g' | tr '[:upper:]' '[:lower:]' | sort | uniq | grep -xvf $DICT" > spellcheck
+cat spellcheck 
+vim spellcheck 
+bash spellcheck
+vim spellcheck 
+chmod 764 spellcheck 
+mv spellcheck ~/bin
+echo "this ise a testr." | spellcheck # our executable script can be embedded into a pipeline
+# note what this means. we can create small scripts, each of which does a single task well; then we can invoke our scripts when we need their functionality, in whichever order suits our needs. this is in accordance with an important programming principle: write once, run everywhere. we will see more of this as we learn how to program in python.
+vim bin/spellcheck 
+ls ~/repo/intro_to_programming/datafile/
+cp ~/repo/intro_to_programming/datafile/web* ~/datafile/
+ls datafile/
+cd datafile/
+head web_log.txt 
